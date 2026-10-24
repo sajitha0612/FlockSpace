@@ -1,0 +1,26 @@
+[  191439ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:864
+[  191451ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:5173/bg.jpg:0
+[  191455ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/api/health:0
+[  191492ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/src/views/auth/Login.vue?t=1792831461568:0
+[  191494ms] [WARNING] [Vue Router warn]: uncaught error during route navigation: @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=8a807fba:205
+[  191495ms] [ERROR] TypeError: Failed to fetch dynamically imported module: http://localhost:5173/src/views/auth/Login.vue?t=1792831461568 @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=8a807fba:2261
+[  191501ms] [WARNING] [Vue Router warn]: Unexpected error when starting the router: TypeError: Failed to fetch dynamically imported module: http://localhost:5173/src/views/auth/Login.vue?t=1792831461568 @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=8a807fba:205
+[  191504ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/favicon.svg:0
+[  191516ms] Failed to fetch dynamically imported module: http://localhost:5173/src/views/auth/Login.vue?t=1792831461568
+[  600281ms] [WARNING] [Vue warn]: Unhandled error during execution of setup function 
+  at <Profile onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< undefined > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  600281ms] [WARNING] [Vue warn]: Unhandled error during execution of component update 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  600290ms] TypeError: Cannot read properties of null (reading 'id')
+    at setup (http://localhost:5173/src/views/Profile.vue?t=1792831516313:49:35)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2453:19)
+    at setupStatefulComponent (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:10665:25)
+    at setupComponent (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:10627:36)
+    at mountComponent (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:8498:7)
+    at processComponent (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:8464:9)
+    at patch (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:7955:11)
+    at ReactiveEffect.componentUpdateFn [as fn] (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:8620:11)
+    at ReactiveEffect.run (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:578:19)
+    at setupRenderEffect (http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:8748:5)

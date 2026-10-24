@@ -1,0 +1,39 @@
+- generic [ref=f18e2]:
+  - generic [ref=f18e145]:
+    - banner [ref=f18e146]:
+      - generic [ref=f18e147]: NestUp
+      - link "Sign in" [ref=f18e148] [cursor=pointer]:
+        - /url: /login
+      - link "Get started" [ref=f18e149] [cursor=pointer]:
+        - /url: /signup
+    - generic [ref=f18e151]:
+      - heading "Find your flock. Study together. Build your nest." [level=1] [ref=f18e152]: Find your flock.Study together.Build your nest.
+      - paragraph [ref=f18e153]: Join study rooms, meet like-minded buddies, track your progress and grow — together.
+      - generic [ref=f18e154]:
+        - link "Get started" [ref=f18e155] [cursor=pointer]:
+          - /url: /signup
+        - link "I already have an account" [ref=f18e156] [cursor=pointer]:
+          - /url: /login
+    - generic [ref=f18e207]:
+      - generic [ref=f18e208]:
+        - generic [ref=f18e209]: "1"
+        - heading "Discover or create a room" [level=3] [ref=f18e210]
+        - paragraph [ref=f18e211]: Pick a subject, topics, schedule, duration and size.
+      - generic [ref=f18e212]:
+        - generic [ref=f18e213]: "2"
+        - heading "Study together" [level=3] [ref=f18e214]
+        - paragraph [ref=f18e215]: Your own Pomodoro rhythm, shared chat, notes and AI help.
+      - generic [ref=f18e216]:
+        - generic [ref=f18e217]: "3"
+        - heading "Unlock the halfway quiz" [level=3] [ref=f18e218]
+        - paragraph [ref=f18e219]: Tick off half your topics to test yourself.
+      - generic [ref=f18e220]:
+        - generic [ref=f18e221]: "4"
+        - heading "Race to build your nest" [level=3] [ref=f18e222]
+        - paragraph [ref=f18e223]: "A common final quiz: every right answer is a twig."
+      - generic [ref=f18e224]:
+        - generic [ref=f18e225]: "5"
+        - heading "Earn Golden Nests" [level=3] [ref=f18e226]
+        - paragraph [ref=f18e227]: Win races, unlock milestones and dress up your bird.
+    - contentinfo [ref=f18e228]: Rewards come only from quizzes, never from time online. AI helps you learn; it never decides who wins.
+  - status

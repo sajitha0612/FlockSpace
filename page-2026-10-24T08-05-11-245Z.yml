@@ -1,0 +1,493 @@
+- generic [ref=f32e2]:
+  - generic [ref=f32e48]:
+    - complementary [ref=f32e49]:
+      - link "FlockSpace" [ref=f32e50] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f32e59]:
+        - link "Home" [ref=f32e60] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f32e64] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f32e68] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f32e72] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f32e76] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f32e80] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f32e84] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f32e88]:
+        - link "Settings" [ref=f32e89] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f32e93] [cursor=pointer]
+    - generic [ref=f32e97]:
+      - banner [ref=f32e98]:
+        - link "Offline demo" [ref=f32e99] [cursor=pointer]:
+          - /url: /settings?tab=demo
+        - button "Toggle dark mode" [ref=f32e100] [cursor=pointer]
+        - link "Invitations" [ref=f32e103] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 3 unread" [ref=f32e106] [cursor=pointer]:
+          - /url: /notifications
+          - generic [ref=f32e109]: "3"
+        - link "My profile" [ref=f32e110] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f32e111]
+      - main [ref=f32e131]:
+        - generic [ref=f32e132]:
+          - generic [ref=f32e133]:
+            - generic [ref=f32e134]:
+              - heading "Good afternoon, Alex!" [level=1] [ref=f32e135]
+              - paragraph [ref=f32e136]: Small steps. Big nests.
+            - generic [ref=f32e137]:
+              - link "1 buddy request" [ref=f32e138] [cursor=pointer]:
+                - /url: /buddies?tab=requests
+              - link "1 room invite" [ref=f32e139] [cursor=pointer]:
+                - /url: /invites
+              - link "Create room" [ref=f32e140] [cursor=pointer]:
+                - /url: /rooms/new
+          - generic [ref=f32e143]:
+            - generic [ref=f32e144]:
+              - img "Your bird" [ref=f32e145]
+              - generic [ref=f32e164]:
+                - generic [ref=f32e165]:
+                  - strong [ref=f32e166]: Nest level 2
+                  - generic [ref=f32e167]: 34 twigs
+                - generic "Nest 24% to next level" [ref=f32e170]
+                - paragraph [ref=f32e172]: 12 / 50 twigs to the next level
+            - generic [ref=f32e173]:
+              - img "Golden Nest" [ref=f32e174]
+              - generic [ref=f32e203]:
+                - strong [ref=f32e204]: Golden Nests
+                - generic [ref=f32e205]: "1"
+                - paragraph [ref=f32e206]:
+                  - text: 4 more to unlock
+                  - strong [ref=f32e207]: Exclusive Feather Scarf
+            - generic [ref=f32e208]:
+              - generic [ref=f32e209]:
+                - strong [ref=f32e210]: Study streak
+                - link "Details" [ref=f32e211] [cursor=pointer]:
+                  - /url: /progress
+              - generic [ref=f32e212]:
+                - generic [ref=f32e213]:
+                  - generic [ref=f32e214]: "5"
+                  - text: days now
+                - generic [ref=f32e215]:
+                  - generic [ref=f32e216]: "5"
+                  - text: longest
+              - paragraph [ref=f32e218]: 25 more focus minutes today keeps your 5-day streak going.
+          - generic [ref=f32e219]:
+            - generic [ref=f32e220]:
+              - generic [ref=f32e221]:
+                - generic [ref=f32e222]:
+                  - heading "Your rooms" [level=3] [ref=f32e223]
+                  - link "Discover rooms" [ref=f32e224] [cursor=pointer]:
+                    - /url: /rooms
+                - generic [ref=f32e225]:
+                  - generic [ref=f32e226]:
+                    - generic [ref=f32e227]:
+                      - link "Graph Algorithms Sprint" [ref=f32e228] [cursor=pointer]:
+                        - /url: /rooms/demo-room-graphs
+                      - generic [ref=f32e229]: Study phase · 54:49 left
+                      - generic [ref=f32e230]: 2/6 topics
+                    - link "Open" [ref=f32e234] [cursor=pointer]:
+                      - /url: /rooms/demo-room-graphs
+                  - generic [ref=f32e235]:
+                    - generic [ref=f32e236]:
+                      - link "React + Accessibility Build Night" [ref=f32e237] [cursor=pointer]:
+                        - /url: /rooms/demo-room-react
+                      - generic [ref=f32e238]: Starts Today, 3:00 PM
+                    - link "Open" [ref=f32e239] [cursor=pointer]:
+                      - /url: /rooms/demo-room-react
+              - generic [ref=f32e240]:
+                - heading "Halfway quizzes" [level=3] [ref=f32e242]
+                - generic [ref=f32e243]:
+                  - generic [ref=f32e245]:
+                    - strong [ref=f32e246]: Graph Algorithms Sprint
+                    - generic [ref=f32e247]: Unlocks when you finish half the topics
+                  - generic [ref=f32e249]:
+                    - strong [ref=f32e250]: React + Accessibility Build Night
+                    - generic [ref=f32e251]: Unlocks when you finish half the topics
+              - generic [ref=f32e252]:
+                - generic [ref=f32e253]:
+                  - heading "This week" [level=3] [ref=f32e254]
+                  - link "All charts" [ref=f32e255] [cursor=pointer]:
+                    - /url: /progress
+                - paragraph [ref=f32e256]: 325 focus minutes · 9 completed sessions · 2 topics ticked off
+                - img "Focus minutes" [ref=f32e258]:
+                  - generic [ref=f32e260]:
+                    - generic [ref=f32e261]: "0"
+                    - generic [ref=f32e262]: "20"
+                    - generic [ref=f32e263]: "40"
+                    - generic [ref=f32e264]: "60"
+                    - generic [ref=f32e265]: "80"
+                    - generic [ref=f32e266]: Sun
+                    - generic [ref=f32e267]: Mon
+                    - generic [ref=f32e268]: Tue
+                    - generic [ref=f32e269]: Wed
+                    - generic [ref=f32e270]: Thu
+                    - generic [ref=f32e271]: Fri
+                    - generic [ref=f32e272]: Sat
+                  - generic [ref=f32e284]: Goal 25 min
+              - generic [ref=f32e293]:
+                - generic [ref=f32e294]:
+                  - heading "Study calendar" [level=3] [ref=f32e295]
+                  - generic [ref=f32e296]: Last 26 weeks
+                - generic [ref=f32e297]:
+                  - img "Daily study calendar" [ref=f32e299]:
+                    - generic [ref=f32e300]: Mon
+                    - generic [ref=f32e301]: Wed
+                    - generic [ref=f32e302]: Fri
+                    - 'generic "Sun, Apr 26: 0 min" [ref=f32e303]'
+                    - 'generic "Mon, Apr 27: 0 min" [ref=f32e304]'
+                    - 'generic "Tue, Apr 28: 0 min" [ref=f32e305]'
+                    - 'generic "Wed, Apr 29: 0 min" [ref=f32e306]'
+                    - 'generic "Thu, Apr 30: 0 min" [ref=f32e307]'
+                    - 'generic "Fri, May 1: 0 min" [ref=f32e308]'
+                    - 'generic "Sat, May 2: 0 min" [ref=f32e309]'
+                    - 'generic "Sun, May 3: 0 min" [ref=f32e310]'
+                    - 'generic "Mon, May 4: 0 min" [ref=f32e311]'
+                    - 'generic "Tue, May 5: 0 min" [ref=f32e312]'
+                    - 'generic "Wed, May 6: 0 min" [ref=f32e313]'
+                    - 'generic "Thu, May 7: 0 min" [ref=f32e314]'
+                    - 'generic "Fri, May 8: 0 min" [ref=f32e315]'
+                    - 'generic "Sat, May 9: 0 min" [ref=f32e316]'
+                    - 'generic "Sun, May 10: 0 min" [ref=f32e317]'
+                    - 'generic "Mon, May 11: 0 min" [ref=f32e318]'
+                    - 'generic "Tue, May 12: 0 min" [ref=f32e319]'
+                    - 'generic "Wed, May 13: 0 min" [ref=f32e320]'
+                    - 'generic "Thu, May 14: 0 min" [ref=f32e321]'
+                    - 'generic "Fri, May 15: 0 min" [ref=f32e322]'
+                    - 'generic "Sat, May 16: 0 min" [ref=f32e323]'
+                    - 'generic "Sun, May 17: 0 min" [ref=f32e324]'
+                    - 'generic "Mon, May 18: 0 min" [ref=f32e325]'
+                    - 'generic "Tue, May 19: 0 min" [ref=f32e326]'
+                    - 'generic "Wed, May 20: 0 min" [ref=f32e327]'
+                    - 'generic "Thu, May 21: 0 min" [ref=f32e328]'
+                    - 'generic "Fri, May 22: 0 min" [ref=f32e329]'
+                    - 'generic "Sat, May 23: 0 min" [ref=f32e330]'
+                    - 'generic "Sun, May 24: 0 min" [ref=f32e331]'
+                    - 'generic "Mon, May 25: 0 min" [ref=f32e332]'
+                    - 'generic "Tue, May 26: 0 min" [ref=f32e333]'
+                    - 'generic "Wed, May 27: 0 min" [ref=f32e334]'
+                    - 'generic "Thu, May 28: 0 min" [ref=f32e335]'
+                    - 'generic "Fri, May 29: 0 min" [ref=f32e336]'
+                    - 'generic "Sat, May 30: 0 min" [ref=f32e337]'
+                    - 'generic "Sun, May 31: 0 min" [ref=f32e338]'
+                    - 'generic "Mon, Jun 1: 0 min" [ref=f32e339]'
+                    - 'generic "Tue, Jun 2: 0 min" [ref=f32e340]'
+                    - 'generic "Wed, Jun 3: 0 min" [ref=f32e341]'
+                    - 'generic "Thu, Jun 4: 0 min" [ref=f32e342]'
+                    - 'generic "Fri, Jun 5: 0 min" [ref=f32e343]'
+                    - 'generic "Sat, Jun 6: 0 min" [ref=f32e344]'
+                    - 'generic "Sun, Jun 7: 0 min" [ref=f32e345]'
+                    - 'generic "Mon, Jun 8: 0 min" [ref=f32e346]'
+                    - 'generic "Tue, Jun 9: 0 min" [ref=f32e347]'
+                    - 'generic "Wed, Jun 10: 0 min" [ref=f32e348]'
+                    - 'generic "Thu, Jun 11: 0 min" [ref=f32e349]'
+                    - 'generic "Fri, Jun 12: 0 min" [ref=f32e350]'
+                    - 'generic "Sat, Jun 13: 0 min" [ref=f32e351]'
+                    - 'generic "Sun, Jun 14: 0 min" [ref=f32e352]'
+                    - 'generic "Mon, Jun 15: 0 min" [ref=f32e353]'
+                    - 'generic "Tue, Jun 16: 0 min" [ref=f32e354]'
+                    - 'generic "Wed, Jun 17: 0 min" [ref=f32e355]'
+                    - 'generic "Thu, Jun 18: 0 min" [ref=f32e356]'
+                    - 'generic "Fri, Jun 19: 0 min" [ref=f32e357]'
+                    - 'generic "Sat, Jun 20: 0 min" [ref=f32e358]'
+                    - 'generic "Sun, Jun 21: 0 min" [ref=f32e359]'
+                    - 'generic "Mon, Jun 22: 0 min" [ref=f32e360]'
+                    - 'generic "Tue, Jun 23: 0 min" [ref=f32e361]'
+                    - 'generic "Wed, Jun 24: 0 min" [ref=f32e362]'
+                    - 'generic "Thu, Jun 25: 0 min" [ref=f32e363]'
+                    - 'generic "Fri, Jun 26: 0 min" [ref=f32e364]'
+                    - 'generic "Sat, Jun 27: 0 min" [ref=f32e365]'
+                    - 'generic "Sun, Jun 28: 0 min" [ref=f32e366]'
+                    - 'generic "Mon, Jun 29: 0 min" [ref=f32e367]'
+                    - 'generic "Tue, Jun 30: 0 min" [ref=f32e368]'
+                    - 'generic "Wed, Jul 1: 0 min" [ref=f32e369]'
+                    - 'generic "Thu, Jul 2: 0 min" [ref=f32e370]'
+                    - 'generic "Fri, Jul 3: 0 min" [ref=f32e371]'
+                    - 'generic "Sat, Jul 4: 0 min" [ref=f32e372]'
+                    - 'generic "Sun, Jul 5: 0 min" [ref=f32e373]'
+                    - 'generic "Mon, Jul 6: 0 min" [ref=f32e374]'
+                    - 'generic "Tue, Jul 7: 0 min" [ref=f32e375]'
+                    - 'generic "Wed, Jul 8: 0 min" [ref=f32e376]'
+                    - 'generic "Thu, Jul 9: 0 min" [ref=f32e377]'
+                    - 'generic "Fri, Jul 10: 0 min" [ref=f32e378]'
+                    - 'generic "Sat, Jul 11: 0 min" [ref=f32e379]'
+                    - 'generic "Sun, Jul 12: 0 min" [ref=f32e380]'
+                    - 'generic "Mon, Jul 13: 0 min" [ref=f32e381]'
+                    - 'generic "Tue, Jul 14: 0 min" [ref=f32e382]'
+                    - 'generic "Wed, Jul 15: 0 min" [ref=f32e383]'
+                    - 'generic "Thu, Jul 16: 0 min" [ref=f32e384]'
+                    - 'generic "Fri, Jul 17: 0 min" [ref=f32e385]'
+                    - 'generic "Sat, Jul 18: 0 min" [ref=f32e386]'
+                    - 'generic "Sun, Jul 19: 0 min" [ref=f32e387]'
+                    - 'generic "Mon, Jul 20: 0 min" [ref=f32e388]'
+                    - 'generic "Tue, Jul 21: 0 min" [ref=f32e389]'
+                    - 'generic "Wed, Jul 22: 0 min" [ref=f32e390]'
+                    - 'generic "Thu, Jul 23: 0 min" [ref=f32e391]'
+                    - 'generic "Fri, Jul 24: 0 min" [ref=f32e392]'
+                    - 'generic "Sat, Jul 25: 0 min" [ref=f32e393]'
+                    - 'generic "Sun, Jul 26: 0 min" [ref=f32e394]'
+                    - 'generic "Mon, Jul 27: 0 min" [ref=f32e395]'
+                    - 'generic "Tue, Jul 28: 0 min" [ref=f32e396]'
+                    - 'generic "Wed, Jul 29: 0 min" [ref=f32e397]'
+                    - 'generic "Thu, Jul 30: 0 min" [ref=f32e398]'
+                    - 'generic "Fri, Jul 31: 0 min" [ref=f32e399]'
+                    - 'generic "Sat, Aug 1: 0 min" [ref=f32e400]'
+                    - 'generic "Sun, Aug 2: 0 min" [ref=f32e401]'
+                    - 'generic "Mon, Aug 3: 0 min" [ref=f32e402]'
+                    - 'generic "Tue, Aug 4: 0 min" [ref=f32e403]'
+                    - 'generic "Wed, Aug 5: 0 min" [ref=f32e404]'
+                    - 'generic "Thu, Aug 6: 0 min" [ref=f32e405]'
+                    - 'generic "Fri, Aug 7: 0 min" [ref=f32e406]'
+                    - 'generic "Sat, Aug 8: 0 min" [ref=f32e407]'
+                    - 'generic "Sun, Aug 9: 0 min" [ref=f32e408]'
+                    - 'generic "Mon, Aug 10: 0 min" [ref=f32e409]'
+                    - 'generic "Tue, Aug 11: 0 min" [ref=f32e410]'
+                    - 'generic "Wed, Aug 12: 0 min" [ref=f32e411]'
+                    - 'generic "Thu, Aug 13: 0 min" [ref=f32e412]'
+                    - 'generic "Fri, Aug 14: 0 min" [ref=f32e413]'
+                    - 'generic "Sat, Aug 15: 0 min" [ref=f32e414]'
+                    - 'generic "Sun, Aug 16: 0 min" [ref=f32e415]'
+                    - 'generic "Mon, Aug 17: 0 min" [ref=f32e416]'
+                    - 'generic "Tue, Aug 18: 0 min" [ref=f32e417]'
+                    - 'generic "Wed, Aug 19: 0 min" [ref=f32e418]'
+                    - 'generic "Thu, Aug 20: 0 min" [ref=f32e419]'
+                    - 'generic "Fri, Aug 21: 0 min" [ref=f32e420]'
+                    - 'generic "Sat, Aug 22: 0 min" [ref=f32e421]'
+                    - 'generic "Sun, Aug 23: 0 min" [ref=f32e422]'
+                    - 'generic "Mon, Aug 24: 0 min" [ref=f32e423]'
+                    - 'generic "Tue, Aug 25: 0 min" [ref=f32e424]'
+                    - 'generic "Wed, Aug 26: 0 min" [ref=f32e425]'
+                    - 'generic "Thu, Aug 27: 0 min" [ref=f32e426]'
+                    - 'generic "Fri, Aug 28: 0 min" [ref=f32e427]'
+                    - 'generic "Sat, Aug 29: 0 min" [ref=f32e428]'
+                    - 'generic "Sun, Aug 30: 0 min" [ref=f32e429]'
+                    - 'generic "Mon, Aug 31: 0 min" [ref=f32e430]'
+                    - 'generic "Tue, Sep 1: 0 min" [ref=f32e431]'
+                    - 'generic "Wed, Sep 2: 0 min" [ref=f32e432]'
+                    - 'generic "Thu, Sep 3: 0 min" [ref=f32e433]'
+                    - 'generic "Fri, Sep 4: 0 min" [ref=f32e434]'
+                    - 'generic "Sat, Sep 5: 0 min" [ref=f32e435]'
+                    - 'generic "Sun, Sep 6: 0 min" [ref=f32e436]'
+                    - 'generic "Mon, Sep 7: 0 min" [ref=f32e437]'
+                    - 'generic "Tue, Sep 8: 0 min" [ref=f32e438]'
+                    - 'generic "Wed, Sep 9: 0 min" [ref=f32e439]'
+                    - 'generic "Thu, Sep 10: 0 min" [ref=f32e440]'
+                    - 'generic "Fri, Sep 11: 0 min" [ref=f32e441]'
+                    - 'generic "Sat, Sep 12: 0 min" [ref=f32e442]'
+                    - 'generic "Sun, Sep 13: 0 min" [ref=f32e443]'
+                    - 'generic "Mon, Sep 14: 0 min" [ref=f32e444]'
+                    - 'generic "Tue, Sep 15: 0 min" [ref=f32e445]'
+                    - 'generic "Wed, Sep 16: 0 min" [ref=f32e446]'
+                    - 'generic "Thu, Sep 17: 0 min" [ref=f32e447]'
+                    - 'generic "Fri, Sep 18: 0 min" [ref=f32e448]'
+                    - 'generic "Sat, Sep 19: 0 min" [ref=f32e449]'
+                    - 'generic "Sun, Sep 20: 0 min" [ref=f32e450]'
+                    - 'generic "Mon, Sep 21: 0 min" [ref=f32e451]'
+                    - 'generic "Tue, Sep 22: 0 min" [ref=f32e452]'
+                    - 'generic "Wed, Sep 23: 0 min" [ref=f32e453]'
+                    - 'generic "Thu, Sep 24: 0 min" [ref=f32e454]'
+                    - 'generic "Fri, Sep 25: 0 min" [ref=f32e455]'
+                    - 'generic "Sat, Sep 26: 0 min" [ref=f32e456]'
+                    - 'generic "Sun, Sep 27: 0 min" [ref=f32e457]'
+                    - 'generic "Mon, Sep 28: 0 min" [ref=f32e458]'
+                    - 'generic "Tue, Sep 29: 0 min" [ref=f32e459]'
+                    - 'generic "Wed, Sep 30: 0 min" [ref=f32e460]'
+                    - 'generic "Thu, Oct 1: 0 min" [ref=f32e461]'
+                    - 'generic "Fri, Oct 2: 0 min" [ref=f32e462]'
+                    - 'generic "Sat, Oct 3: 75 min (goal met)" [ref=f32e463]'
+                    - 'generic "Sun, Oct 4: 25 min (goal met)" [ref=f32e464]'
+                    - 'generic "Mon, Oct 5: 25 min (goal met)" [ref=f32e465]'
+                    - 'generic "Tue, Oct 6: 0 min" [ref=f32e466]'
+                    - 'generic "Wed, Oct 7: 0 min" [ref=f32e467]'
+                    - 'generic "Thu, Oct 8: 25 min (goal met)" [ref=f32e468]'
+                    - 'generic "Fri, Oct 9: 75 min (goal met)" [ref=f32e469]'
+                    - 'generic "Sat, Oct 10: 25 min (goal met)" [ref=f32e470]'
+                    - 'generic "Sun, Oct 11: 0 min" [ref=f32e471]'
+                    - 'generic "Mon, Oct 12: 75 min (goal met)" [ref=f32e472]'
+                    - 'generic "Tue, Oct 13: 25 min (goal met)" [ref=f32e473]'
+                    - 'generic "Wed, Oct 14: 25 min (goal met)" [ref=f32e474]'
+                    - 'generic "Thu, Oct 15: 0 min" [ref=f32e475]'
+                    - 'generic "Fri, Oct 16: 25 min (goal met)" [ref=f32e476]'
+                    - 'generic "Sat, Oct 17: 25 min (goal met)" [ref=f32e477]'
+                    - 'generic "Sun, Oct 18: 0 min" [ref=f32e478]'
+                    - 'generic "Mon, Oct 19: 25 min (goal met)" [ref=f32e479]'
+                    - 'generic "Tue, Oct 20: 75 min (goal met)" [ref=f32e480]'
+                    - 'generic "Wed, Oct 21: 75 min (goal met)" [ref=f32e481]'
+                    - 'generic "Thu, Oct 22: 75 min (goal met)" [ref=f32e482]'
+                    - 'generic "Fri, Oct 23: 75 min (goal met)" [ref=f32e483]'
+                    - 'generic "Sat, Oct 24: 0 min" [ref=f32e484]'
+                  - generic [ref=f32e485]:
+                    - generic [ref=f32e486]: Hover a day for details
+                    - generic [ref=f32e487]: No study
+                    - generic [ref=f32e489]: Under half the goal
+                    - generic [ref=f32e491]: Over half the goal
+                    - generic [ref=f32e493]: Goal met
+                    - generic [ref=f32e495]: Double the goal
+              - generic [ref=f32e497]:
+                - heading "Recent sessions" [level=3] [ref=f32e499]
+                - table [ref=f32e500]:
+                  - rowgroup [ref=f32e501]:
+                    - row [ref=f32e502]:
+                      - columnheader "When" [ref=f32e503]
+                      - columnheader "Subject" [ref=f32e504]
+                      - columnheader "Minutes" [ref=f32e505]
+                      - columnheader "Status" [ref=f32e506]
+                  - rowgroup [ref=f32e507]:
+                    - row [ref=f32e508]:
+                      - cell "17 h ago" [ref=f32e509]
+                      - cell "Web Development" [ref=f32e510]
+                      - cell "50" [ref=f32e511]
+                      - cell "Completed" [ref=f32e512]
+                    - row [ref=f32e514]:
+                      - cell "18 h ago" [ref=f32e515]
+                      - cell "Operating Systems" [ref=f32e516]
+                      - cell "25" [ref=f32e517]
+                      - cell "Completed" [ref=f32e518]
+                    - row [ref=f32e520]:
+                      - cell "Thu, Oct 22" [ref=f32e521]
+                      - cell "Data Structures & Algorithms" [ref=f32e522]
+                      - cell "50" [ref=f32e523]
+                      - cell "Completed" [ref=f32e524]
+                    - row [ref=f32e526]:
+                      - cell "Thu, Oct 22" [ref=f32e527]
+                      - cell "Web Development" [ref=f32e528]
+                      - cell "25" [ref=f32e529]
+                      - cell "Completed" [ref=f32e530]
+                    - row [ref=f32e532]:
+                      - cell "Wed, Oct 21" [ref=f32e533]
+                      - cell "Operating Systems" [ref=f32e534]
+                      - cell "50" [ref=f32e535]
+                      - cell "Completed" [ref=f32e536]
+            - generic [ref=f32e538]:
+              - generic [ref=f32e539]:
+                - generic [ref=f32e540]:
+                  - heading "Upcoming meetings" [level=3] [ref=f32e541]
+                  - link "Schedule" [ref=f32e542] [cursor=pointer]:
+                    - /url: /meetings
+                - generic [ref=f32e543]:
+                  - link "Weekly DP Practice Tomorrow, 3:00 PM" [ref=f32e544] [cursor=pointer]:
+                    - /url: /meetings/demo-meet-dp
+                    - generic [ref=f32e547]:
+                      - strong [ref=f32e548]: Weekly DP Practice
+                      - generic [ref=f32e549]: Tomorrow, 3:00 PM
+                  - 'link "Mock Interview: Networking Tue, Oct 27, 3:00 PM Reply" [ref=f32e550] [cursor=pointer]':
+                    - /url: /meetings/demo-meet-mock
+                    - generic [ref=f32e553]:
+                      - strong [ref=f32e554]: "Mock Interview: Networking"
+                      - generic [ref=f32e555]: Tue, Oct 27, 3:00 PM
+                    - generic [ref=f32e556]: Reply
+              - generic [ref=f32e557]:
+                - heading "Notes & AI" [level=3] [ref=f32e559]
+                - generic [ref=f32e560]: Notes generated in your rooms appear here.
+              - generic [ref=f32e561]:
+                - heading "Nest Race results" [level=3] [ref=f32e563]
+                - generic [ref=f32e564]:
+                  - generic [ref=f32e565]:
+                    - generic [ref=f32e566]: "4"
+                    - generic [ref=f32e567]:
+                      - strong [ref=f32e568]: Process Sync Quiz Night
+                      - generic [ref=f32e569]: 4th of 6 · 6 twigs · 70% accuracy
+                  - generic [ref=f32e570]:
+                    - generic [ref=f32e571]: "1"
+                    - generic [ref=f32e572]:
+                      - strong [ref=f32e573]: Trees & Heaps Showdown
+                      - generic [ref=f32e574]: 1st of 7 · 9 twigs · 90% accuracy
+              - generic [ref=f32e575]:
+                - heading "Rooms for you" [level=3] [ref=f32e577]
+                - generic [ref=f32e578]:
+                  - article [ref=f32e579]:
+                    - img "Bird avatar" [ref=f32e581]
+                    - generic [ref=f32e597]:
+                      - generic [ref=f32e598]:
+                        - link "OS Midterm Cram" [ref=f32e599] [cursor=pointer]:
+                          - /url: /rooms/demo-room-os
+                        - generic [ref=f32e600]: Live now
+                      - generic [ref=f32e601]:
+                        - generic [ref=f32e602]: Operating Systems · CS304
+                        - generic [ref=f32e603]: 2h
+                        - generic [ref=f32e606]: 2/10
+                        - generic [ref=f32e609]: by Arjun Patel
+                      - generic [ref=f32e610]: Today, 1:00 PM
+                      - generic [ref=f32e613]:
+                        - generic [ref=f32e614]: CPU scheduling
+                        - generic [ref=f32e615]: Paging & TLBs
+                        - generic [ref=f32e616]: Page replacement
+                        - generic [ref=f32e617]: Deadlocks
+                        - generic [ref=f32e618]: Semaphores
+                    - button "Join" [ref=f32e620] [cursor=pointer]
+                  - article [ref=f32e621]:
+                    - img "Bird avatar" [ref=f32e623]
+                    - generic [ref=f32e639]:
+                      - generic [ref=f32e640]:
+                        - link "Linear Algebra Problem Set" [ref=f32e641] [cursor=pointer]:
+                          - /url: /rooms/demo-room-la
+                        - generic [ref=f32e642]: Upcoming
+                      - generic [ref=f32e643]:
+                        - generic [ref=f32e644]: Linear Algebra
+                        - generic [ref=f32e645]: 1h 30m
+                        - generic [ref=f32e648]: 2/10
+                        - generic [ref=f32e651]: by Kwame Mensah
+                      - generic [ref=f32e652]: Tomorrow, 3:00 AM
+                      - generic [ref=f32e655]:
+                        - generic [ref=f32e656]: Eigenvalues
+                        - generic [ref=f32e657]: Diagonalisation
+                        - generic [ref=f32e658]: SVD intuition
+                    - button "Join" [ref=f32e660] [cursor=pointer]
+                  - article [ref=f32e661]:
+                    - img "Bird avatar" [ref=f32e663]
+                    - generic [ref=f32e679]:
+                      - generic [ref=f32e680]:
+                        - link "SQL Joins from Zero" [ref=f32e681] [cursor=pointer]:
+                          - /url: /rooms/demo-room-sql
+                        - generic [ref=f32e682]: Upcoming
+                      - generic [ref=f32e683]:
+                        - generic [ref=f32e684]: Databases
+                        - generic [ref=f32e685]: 1h
+                        - generic [ref=f32e688]: 1/6
+                        - generic [ref=f32e691]: by Lena Fischer
+                      - generic [ref=f32e692]: Tomorrow, 3:00 PM
+                      - generic [ref=f32e695]:
+                        - generic [ref=f32e696]: Inner joins
+                        - generic [ref=f32e697]: Outer joins
+                        - generic [ref=f32e698]: Group by & having
+                        - generic [ref=f32e699]: Subqueries
+                    - button "Join" [ref=f32e701] [cursor=pointer]
+              - generic [ref=f32e702]:
+                - generic [ref=f32e703]:
+                  - heading "Study buddies for you" [level=3] [ref=f32e704]
+                  - link "More" [ref=f32e705] [cursor=pointer]:
+                    - /url: /buddies
+                - generic [ref=f32e706]:
+                  - generic [ref=f32e707]:
+                    - img "Bird avatar" [ref=f32e708]
+                    - generic [ref=f32e727]:
+                      - link "Ravi Iyer" [ref=f32e728] [cursor=pointer]:
+                        - /url: /u/demo-ravi
+                      - generic [ref=f32e729]: "58% match · You share 1 subject: web development."
+                    - button "Follow" [ref=f32e730] [cursor=pointer]
+                  - generic [ref=f32e731]:
+                    - img "Bird avatar" [ref=f32e732]
+                    - generic [ref=f32e752]:
+                      - link "Sofia Martinez" [ref=f32e753] [cursor=pointer]:
+                        - /url: /u/demo-sofia
+                      - generic [ref=f32e754]: "46% match · You share 1 subject: web development."
+                    - button "Follow" [ref=f32e755] [cursor=pointer]
+                  - generic [ref=f32e756]:
+                    - img "Bird avatar" [ref=f32e757]
+                    - generic [ref=f32e774]:
+                      - link "Lena Fischer" [ref=f32e775] [cursor=pointer]:
+                        - /url: /u/demo-lena
+                      - generic [ref=f32e776]: "43% match · You share 1 subject: data structures & algorithms."
+                    - button "Follow" [ref=f32e777] [cursor=pointer]
+              - generic [ref=f32e778]:
+                - img "Bird avatar" [ref=f32e779]
+                - paragraph [ref=f32e798]:
+                  - strong [ref=f32e799]: Keep going!
+                  - text: You're doing great.
+  - status

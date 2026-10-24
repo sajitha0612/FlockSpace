@@ -1,0 +1,157 @@
+- generic [ref=f115e2]:
+  - generic [ref=f115e3]:
+    - complementary [ref=f115e4]:
+      - link "FlockSpace" [ref=f115e5] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f115e14]:
+        - link "Home" [ref=f115e15] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f115e19] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f115e23] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f115e27] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f115e31] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f115e35] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f115e39] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f115e43]:
+        - link "Settings" [ref=f115e44] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f115e48] [cursor=pointer]
+    - generic [ref=f115e52]:
+      - banner [ref=f115e53]:
+        - link "Offline demo" [ref=f115e54] [cursor=pointer]:
+          - /url: /settings?tab=demo
+        - button "Toggle dark mode" [ref=f115e55] [cursor=pointer]
+        - link "Invitations" [ref=f115e58] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 0 unread" [ref=f115e61] [cursor=pointer]:
+          - /url: /notifications
+        - link "My profile" [ref=f115e64] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f115e65]
+      - main [ref=f115e85]:
+        - generic [ref=f115e86]:
+          - generic [ref=f115e87]:
+            - generic [ref=f115e88]:
+              - generic [ref=f115e89]:
+                - generic [ref=f115e90]:
+                  - heading "Graph Algorithms Sprint" [level=1] [ref=f115e91]
+                  - generic [ref=f115e92]: Study phase ends in 43:20
+                - generic [ref=f115e93]:
+                  - generic [ref=f115e94]: Data Structures & Algorithms · CS201
+                  - generic [ref=f115e95]: 2h 30m
+                  - generic [ref=f115e98]: 4/10
+                  - generic [ref=f115e101]: Today, 12:00 PM
+                  - generic [ref=f115e104]: by Maya Chen
+              - generic [ref=f115e105]:
+                - button "Report" [ref=f115e106] [cursor=pointer]
+                - button "Leave" [ref=f115e109] [cursor=pointer]
+            - generic "71% of study time used" [ref=f115e110]
+            - paragraph [ref=f115e112]: BFS to Dijkstra in one evening. Bring your hardest problems.
+          - generic [ref=f115e113]:
+            - generic [ref=f115e114]:
+              - tablist [ref=f115e115]:
+                - tab "Checklist" [ref=f115e116] [cursor=pointer]
+                - tab "Chat" [selected] [ref=f115e117] [cursor=pointer]
+                - tab "Resources" [ref=f115e118] [cursor=pointer]
+                - tab "Notes & AI" [ref=f115e119] [cursor=pointer]
+                - tab "Tasks" [ref=f115e120] [cursor=pointer]
+                - tab "Study agent" [ref=f115e121] [cursor=pointer]
+                - tab "Halfway quiz" [ref=f115e122] [cursor=pointer]
+                - tab "People" [ref=f115e123] [cursor=pointer]
+              - generic [ref=f115e125]:
+                - generic [ref=f115e126]:
+                  - generic [ref=f115e127]: The study phase has started. Good luck, flock!
+                  - generic [ref=f115e128]:
+                    - img "Bird avatar" [ref=f115e129]
+                    - generic [ref=f115e149]:
+                      - generic [ref=f115e150]:
+                        - strong [ref=f115e151]: Maya Chen
+                        - generic [ref=f115e152]: "#2 · 54 min ago"
+                      - generic [ref=f115e153]: Starting with BFS on grids. Anyone stuck on multi-source BFS?
+                      - button "Report message" [ref=f115e155] [cursor=pointer]
+                  - generic [ref=f115e158]:
+                    - img "Bird avatar" [ref=f115e159]
+                    - generic [ref=f115e178]:
+                      - generic [ref=f115e179]:
+                        - strong [ref=f115e180]: Ravi Iyer
+                        - generic [ref=f115e181]: "#3 · 51 min ago"
+                      - generic [ref=f115e182]: Me! Rotting oranges problem keeps timing out.
+                      - button "Report message" [ref=f115e184] [cursor=pointer]
+                  - generic [ref=f115e187]:
+                    - img "Bird avatar" [ref=f115e188]
+                    - generic [ref=f115e208]:
+                      - generic [ref=f115e209]:
+                        - strong [ref=f115e210]: Maya Chen
+                        - generic [ref=f115e211]: "#4 · 49 min ago"
+                      - generic [ref=f115e212]: Push every rotten orange into the queue first, then run one BFS. O(rows*cols).
+                      - button "Report message" [ref=f115e214] [cursor=pointer]
+                  - generic [ref=f115e217]:
+                    - img "Bird avatar" [ref=f115e218]
+                    - generic [ref=f115e235]:
+                      - generic [ref=f115e236]:
+                        - strong [ref=f115e237]: Lena Fischer
+                        - generic [ref=f115e238]: "#5 · 14 min ago"
+                      - generic [ref=f115e239]: Taking a 5 min break, back for topo sort 🐦
+                      - button "Report message" [ref=f115e241] [cursor=pointer]
+                  - generic [ref=f115e301]:
+                    - img "Bird avatar" [ref=f115e302]
+                    - generic [ref=f115e322]:
+                      - generic [ref=f115e323]:
+                        - strong [ref=f115e324]: Alex R.
+                        - generic [ref=f115e325]: "#11 · just now"
+                      - generic [ref=f115e326]: Hi flock!
+                      - generic [ref=f115e327]:
+                        - button "Edit" [ref=f115e328] [cursor=pointer]
+                        - button "Delete" [ref=f115e331] [cursor=pointer]
+                - generic [ref=f115e244]:
+                  - textbox "Message" [active] [ref=f115e245]:
+                    - /placeholder: Ask a question, share an explanation…
+                  - button "Send" [disabled] [ref=f115e246]
+            - complementary [ref=f115e249]:
+              - generic [ref=f115e250]:
+                - heading "Your focus cycle" [level=3] [ref=f115e251]
+                - paragraph [ref=f115e252]: Choose your rhythm. It's yours alone; the room's end time doesn't change.
+                - group "Focus presets" [ref=f115e253]:
+                  - button "15/5" [ref=f115e254] [cursor=pointer]
+                  - button "25/5" [ref=f115e255] [cursor=pointer]
+                  - button "50/10" [ref=f115e256] [cursor=pointer]
+                  - button "Custom" [ref=f115e257] [cursor=pointer]
+                - generic [ref=f115e258]:
+                  - img "idle 00:00" [ref=f115e259]
+                  - generic [ref=f115e262]:
+                    - generic [ref=f115e263]: Ready
+                    - generic [ref=f115e264]: 25:00
+                    - generic [ref=f115e265]: 0 completed
+                - button "Start focus" [ref=f115e267] [cursor=pointer]
+              - generic [ref=f115e270]:
+                - heading "Session ends in" [level=3] [ref=f115e271]
+                - generic [ref=f115e272]: 43:20
+                - paragraph [ref=f115e275]: The room's end time is set by its creator and kept by the server. Pomodoro breaks never extend it.
+              - generic [ref=f115e276]:
+                - generic [ref=f115e277]:
+                  - heading "Participants" [level=3] [ref=f115e278]
+                  - button "All" [ref=f115e279] [cursor=pointer]
+                - generic [ref=f115e280]:
+                  - generic [ref=f115e281]:
+                    - generic [ref=f115e283]: Maya Chen
+                    - generic [ref=f115e284]: Online
+                    - generic [ref=f115e285]: 50%
+                  - generic [ref=f115e286]:
+                    - generic [ref=f115e288]: You
+                    - generic [ref=f115e289]: Online
+                    - generic [ref=f115e290]: 33%
+                  - generic [ref=f115e291]:
+                    - generic [ref=f115e293]: Lena Fischer
+                    - generic [ref=f115e294]: Online
+                    - generic [ref=f115e295]: 17%
+                  - generic [ref=f115e296]:
+                    - generic [ref=f115e298]: Ravi Iyer
+                    - generic [ref=f115e299]: Offline
+                    - generic [ref=f115e300]: 33%
+  - status

@@ -1,0 +1,133 @@
+- generic [ref=f14e2]:
+  - generic [ref=f14e3]:
+    - complementary [ref=f14e4]:
+      - link "NestUp" [ref=f14e5] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f14e6]:
+        - link "Home" [ref=f14e7] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f14e11] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f14e15] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f14e19] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f14e23] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f14e27] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f14e31] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f14e35]:
+        - link "Settings" [ref=f14e36] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f14e40] [cursor=pointer]
+    - generic [ref=f14e44]:
+      - banner [ref=f14e45]:
+        - link "Verify your email" [ref=f14e47] [cursor=pointer]:
+          - /url: /verify
+        - button "Toggle dark mode" [ref=f14e48] [cursor=pointer]
+        - link "Invitations" [ref=f14e51] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 0 unread" [ref=f14e54] [cursor=pointer]:
+          - /url: /notifications
+        - link "My profile" [ref=f14e57] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f14e58]
+      - main [ref=f14e75]:
+        - generic [ref=f14e77]:
+          - generic [ref=f14e78]:
+            - generic [ref=f14e79]:
+              - heading "Create a study room" [level=1] [ref=f14e80]
+              - paragraph [ref=f14e81]: Plan your session and invite your flock.
+            - generic [ref=f14e82]:
+              - text: Room title
+              - textbox "Room title" [ref=f14e83]:
+                - /placeholder: e.g. DSA Fundamentals
+                - text: Graphs Sprint
+            - generic [ref=f14e84]:
+              - generic [ref=f14e85]:
+                - text: Subject
+                - textbox "Subject" [ref=f14e86]:
+                  - /placeholder: e.g. Data Structures & Algorithms
+                  - text: DSA
+              - generic [ref=f14e87]:
+                - text: Course
+                - generic [ref=f14e88]: optional
+                - textbox "Course optional" [ref=f14e89]:
+                  - /placeholder: e.g. CS201
+            - generic [ref=f14e90]:
+              - text: Topics to cover
+              - generic [ref=f14e91]: Everyone gets this checklist. Press Enter after each topic.
+              - generic [ref=f14e92]:
+                - generic [ref=f14e93]:
+                  - text: BFS
+                  - button "Remove BFS" [ref=f14e94] [cursor=pointer]: ✕
+                - generic [ref=f14e158]:
+                  - text: DFS
+                  - button "Remove DFS" [ref=f14e159] [cursor=pointer]: ✕
+                - textbox "Add topic" [active] [ref=f14e95]
+            - generic [ref=f14e96]:
+              - text: Description
+              - generic [ref=f14e97]: optional
+              - textbox "Description optional" [ref=f14e98]
+            - generic [ref=f14e99]:
+              - generic [ref=f14e100]:
+                - text: Start time
+                - generic [ref=f14e101] [cursor=pointer]:
+                  - checkbox "Start right away" [checked] [ref=f14e102]
+                  - text: Start right away
+              - generic [ref=f14e103]:
+                - text: Total study duration
+                - combobox "Total study duration You control this. Individual Pomodoro cycles never change the end time." [ref=f14e104]:
+                  - option "30 minutes"
+                  - option "45 minutes"
+                  - option "1 hour"
+                  - option "1.5 hours"
+                  - option "2 hours" [selected]
+                  - option "2.5 hours"
+                  - option "3 hours"
+                  - option "4 hours"
+                - generic [ref=f14e105]: You control this. Individual Pomodoro cycles never change the end time.
+              - generic [ref=f14e106]:
+                - text: Max participants
+                - spinbutton "Max participants" [ref=f14e107]: "10"
+              - generic [ref=f14e108]:
+                - text: Room type
+                - generic [ref=f14e109]:
+                  - generic [ref=f14e110] [cursor=pointer]:
+                    - radio "Public" [checked] [ref=f14e111]
+                    - text: Public
+                  - generic [ref=f14e112] [cursor=pointer]:
+                    - radio "Private (invite or join code)" [ref=f14e113]
+                    - text: Private (invite or join code)
+            - 'group "Final quiz: the Nest Race" [ref=f14e114]':
+              - paragraph [ref=f14e116]: Starts automatically when the study phase ends and covers every topic. You'll add or import questions after creating the room. As the creator you can see the answers, so you race for practice only.
+              - generic [ref=f14e117]:
+                - generic [ref=f14e118]:
+                  - text: Questions
+                  - spinbutton "Questions" [ref=f14e119]: "10"
+                - generic [ref=f14e120]:
+                  - text: Time limit (min)
+                  - spinbutton "Time limit (min)" [ref=f14e121]: "10"
+                - generic [ref=f14e122]:
+                  - text: Bonus twigs 1st/2nd/3rd
+                  - generic [ref=f14e123]:
+                    - spinbutton "Bonus for place 1" [ref=f14e124]: "3"
+                    - spinbutton "Bonus for place 2" [ref=f14e125]: "2"
+                    - spinbutton "Bonus for place 3" [ref=f14e126]: "1"
+              - paragraph [ref=f14e127]: "Winners: more than 5 eligible racers → top 3 win Golden Nests; 5 or fewer → only 1st. These rules lock when the race starts."
+            - group "AI help" [ref=f14e128]:
+              - generic [ref=f14e130] [cursor=pointer]:
+                - checkbox "AI study agent in this room" [checked] [ref=f14e131]
+                - text: AI study agent in this room
+              - generic [ref=f14e132] [cursor=pointer]:
+                - checkbox "AI notes, document summaries and task lists" [checked] [ref=f14e133]
+                - text: AI notes, document summaries and task lists
+            - generic [ref=f14e134]:
+              - button "Create room" [ref=f14e135] [cursor=pointer]
+              - link "Cancel" [ref=f14e136] [cursor=pointer]:
+                - /url: /rooms
+          - complementary [aria-hidden] [ref=f14e137]:
+            - paragraph [ref=f14e157]: Great minds study together!
+  - status

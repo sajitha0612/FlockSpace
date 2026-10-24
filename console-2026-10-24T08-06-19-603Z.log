@@ -1,0 +1,40 @@
+[  114469ms] [WARNING] [Vue warn]: Unhandled error during execution of native event handler 
+  at <Modal key=0 title="Schedule a study meeting" wide=""  ... > 
+  at <Meetings onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView key="/meetings" > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  114506ms] DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Object] could not be cloned.
+    at demoRequest (http://localhost:5173/src/lib/demo.js?t=1792829240203:862:10)
+    at async request (http://localhost:5173/src/lib/api.js?t=1792829240203:65:14)
+    at async run (http://localhost:5173/src/lib/useLoad.js:33:17)
+    at async create (http://localhost:5173/src/views/Meetings.vue?t=1792829240203:47:15)
+[  131356ms] [WARNING] [Vue warn]: Unhandled error during execution of native event handler 
+  at <Modal key=0 title="Schedule a study meeting" wide=""  ... > 
+  at <Meetings onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView key="/meetings" > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  131355ms] DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Object] could not be cloned.
+    at demoRequest (http://localhost:5173/src/lib/demo.js?t=1792829240203:862:10)
+    at async request (http://localhost:5173/src/lib/api.js?t=1792829240203:65:14)
+    at async run (http://localhost:5173/src/lib/useLoad.js:33:17)
+    at async create (http://localhost:5173/src/views/Meetings.vue?t=1792829240203:47:15)
+[  178344ms] [WARNING] [Vue warn]: Unhandled error during execution of native event handler 
+  at <Modal key=0 title="Schedule a study meeting" wide=""  ... > 
+  at <Meetings onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView key="/meetings" > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  178346ms] DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Object] could not be cloned.
+    at demoRequest (http://localhost:5173/src/lib/demo.js?t=1792829240203:862:10)
+    at async request (http://localhost:5173/src/lib/api.js?t=1792829240203:65:14)
+    at async run (http://localhost:5173/src/lib/useLoad.js:33:17)
+    at async create (http://localhost:5173/src/views/Meetings.vue?t=1792829240203:47:15)
+[  525826ms] [WARNING] [Vue warn]: Unhandled error during execution of native event handler 
+  at <Modal key=0 title="Schedule a study meeting" wide=""  ... > 
+  at <Meetings onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView key="/meetings" > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/chunk-POBAEZZK.js?v=8a807fba:2305
+[  525827ms] DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Object] could not be cloned.
+    at demoRequest (http://localhost:5173/src/lib/demo.js?t=1792829240203:862:10)
+    at async request (http://localhost:5173/src/lib/api.js?t=1792829240203:65:14)
+    at async run (http://localhost:5173/src/lib/useLoad.js:33:17)
+    at async create (http://localhost:5173/src/views/Meetings.vue?t=1792829240203:47:15)

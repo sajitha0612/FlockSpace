@@ -1,0 +1,105 @@
+- generic [ref=f18e2]:
+  - generic [ref=f18e3]:
+    - complementary [ref=f18e4]:
+      - link "NestUp" [ref=f18e5] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f18e6]:
+        - link "Home" [ref=f18e7] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f18e11] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f18e15] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f18e19] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f18e23] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f18e27] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f18e31] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f18e35]:
+        - link "Settings" [ref=f18e36] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f18e40] [cursor=pointer]
+    - generic [ref=f18e44]:
+      - banner [ref=f18e45]:
+        - link "Verify your email" [ref=f18e47] [cursor=pointer]:
+          - /url: /verify
+        - button "Toggle dark mode" [ref=f18e48] [cursor=pointer]
+        - link "Invitations" [ref=f18e51] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 0 unread" [ref=f18e54] [cursor=pointer]:
+          - /url: /notifications
+        - link "My profile" [ref=f18e57] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f18e58]
+      - main [ref=f18e75]:
+        - generic [ref=f18e76]:
+          - generic [ref=f18e77]:
+            - generic [ref=f18e78]:
+              - heading "Study meetings" [level=1] [ref=f18e79]
+              - paragraph [ref=f18e80]: Plan sessions ahead. Times are shown in your timezone.
+            - button "Schedule a meeting" [ref=f18e81] [cursor=pointer]
+          - generic [ref=f18e84]:
+            - button "Upcoming" [ref=f18e85] [cursor=pointer]
+            - button "Past & cancelled" [ref=f18e86] [cursor=pointer]
+          - paragraph [ref=f18e89]: No upcoming meetings. Schedule one and invite your buddies!
+          - dialog "Schedule a study meeting" [ref=f18e91]:
+            - generic [ref=f18e92]:
+              - heading "Schedule a study meeting" [level=2] [ref=f18e93]
+              - button "Close" [active] [ref=f18e94] [cursor=pointer]: ✕
+            - generic [ref=f18e95]:
+              - generic [ref=f18e96]:
+                - generic [ref=f18e97]:
+                  - text: Title
+                  - textbox "Title" [ref=f18e98]
+                - generic [ref=f18e99]:
+                  - text: Subject
+                  - textbox "Subject" [ref=f18e100]
+                - generic [ref=f18e101]:
+                  - text: Start
+                  - textbox "Start" [ref=f18e102]: 2026-10-25T13:23
+                - generic [ref=f18e103]:
+                  - text: Duration (minutes)
+                  - spinbutton "Duration (minutes)" [ref=f18e104]: "60"
+                - generic [ref=f18e105]:
+                  - text: Participant limit
+                  - spinbutton "Participant limit" [ref=f18e106]: "8"
+                - generic [ref=f18e107]:
+                  - text: Room access
+                  - combobox "Room access" [ref=f18e108]:
+                    - option "Private (invitees only)" [selected]
+                    - option "Public"
+                - generic [ref=f18e109]:
+                  - text: Repeat
+                  - combobox "Repeat" [ref=f18e110]:
+                    - option "Doesn't repeat" [selected]
+                    - option "Daily"
+                    - option "Weekly"
+              - generic [ref=f18e111]:
+                - text: Planned topics
+                - textbox "Add topic" [ref=f18e113]
+              - generic [ref=f18e114]:
+                - text: Reminders
+                - generic [ref=f18e115]:
+                  - generic [ref=f18e116] [cursor=pointer]:
+                    - checkbox "1 day before" [ref=f18e117]
+                    - text: 1 day before
+                  - generic [ref=f18e118] [cursor=pointer]:
+                    - checkbox "1 hour before" [checked] [ref=f18e119]
+                    - text: 1 hour before
+                  - generic [ref=f18e120] [cursor=pointer]:
+                    - checkbox "30 min before" [ref=f18e121]
+                    - text: 30 min before
+                  - generic [ref=f18e122] [cursor=pointer]:
+                    - checkbox "10 min before" [checked] [ref=f18e123]
+                    - text: 10 min before
+                - generic [ref=f18e124]: You and everyone who accepts get these, plus a notice when it starts, even if NestUp isn't open.
+              - generic [ref=f18e125]:
+                - text: Invite
+                - generic [ref=f18e126]: Followers and buddies. They join only if they accept.
+                - generic [ref=f18e127]: Follow people or add buddies to invite them.
+              - paragraph [ref=f18e128]: A study room is created for each session, opening at the meeting time.
+              - button "Schedule" [ref=f18e129] [cursor=pointer]
+  - status

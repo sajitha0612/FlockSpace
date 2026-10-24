@@ -1,0 +1,365 @@
+- generic [ref=f19e2]:
+  - generic [ref=f19e3]:
+    - complementary [ref=f19e4]:
+      - link "NestUp" [ref=f19e5] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f19e6]:
+        - link "Home" [ref=f19e7] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f19e11] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f19e15] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f19e19] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f19e23] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f19e27] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f19e31] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f19e35]:
+        - link "Settings" [ref=f19e36] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f19e40] [cursor=pointer]
+    - generic [ref=f19e44]:
+      - banner [ref=f19e45]:
+        - link "Verify your email" [ref=f19e47] [cursor=pointer]:
+          - /url: /verify
+        - button "Toggle dark mode" [ref=f19e48] [cursor=pointer]
+        - link "Invitations" [ref=f19e51] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 1 unread" [ref=f19e54] [cursor=pointer]:
+          - /url: /notifications
+          - generic [ref=f19e57]: "1"
+        - link "My profile" [ref=f19e58] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f19e59]
+      - main [ref=f19e76]:
+        - generic [ref=f19e77]:
+          - generic [ref=f19e78]:
+            - generic [ref=f19e79]:
+              - heading "Good afternoon, Test!" [level=1] [ref=f19e80]
+              - paragraph [ref=f19e81]: Small steps. Big nests.
+            - generic [ref=f19e82]:
+              - link "1 buddy request" [ref=f19e83] [cursor=pointer]:
+                - /url: /buddies?tab=requests
+              - link "Create room" [ref=f19e84] [cursor=pointer]:
+                - /url: /rooms/new
+          - generic [ref=f19e87]:
+            - generic [ref=f19e88]:
+              - img "Your bird" [ref=f19e89]
+              - generic [ref=f19e105]:
+                - generic [ref=f19e106]:
+                  - strong [ref=f19e107]: Nest level 1
+                  - generic [ref=f19e108]: 0 twigs
+                - generic "Nest 0% to next level" [ref=f19e111]
+                - paragraph [ref=f19e112]: 0 / 50 twigs to the next level
+            - generic [ref=f19e113]:
+              - img "Golden Nest" [ref=f19e114]
+              - generic [ref=f19e143]:
+                - strong [ref=f19e144]: Golden Nests
+                - generic [ref=f19e145]: "0"
+                - paragraph [ref=f19e146]:
+                  - text: 5 more to unlock
+                  - strong [ref=f19e147]: Exclusive Feather Scarf
+            - generic [ref=f19e148]:
+              - generic [ref=f19e149]:
+                - strong [ref=f19e150]: Study streak
+                - link "Details" [ref=f19e151] [cursor=pointer]:
+                  - /url: /progress
+              - generic [ref=f19e152]:
+                - generic [ref=f19e153]:
+                  - generic [ref=f19e154]: "0"
+                  - text: days now
+                - generic [ref=f19e155]:
+                  - generic [ref=f19e156]: "0"
+                  - text: longest
+              - paragraph [ref=f19e158]: 25 focus minutes today starts a new streak.
+          - generic [ref=f19e159]:
+            - generic [ref=f19e160]:
+              - generic [ref=f19e161]:
+                - generic [ref=f19e162]:
+                  - heading "Your rooms" [level=3] [ref=f19e163]
+                  - link "Discover rooms" [ref=f19e164] [cursor=pointer]:
+                    - /url: /rooms
+                - generic [ref=f19e166]:
+                  - generic [ref=f19e167]:
+                    - link "Graphs Sprint" [ref=f19e168] [cursor=pointer]:
+                      - /url: /rooms/825ebc41effd4146892a78bb4e2fa346
+                    - generic [ref=f19e169]: Study phase · 01:58:01 left
+                    - generic [ref=f19e170]: 0/2 topics
+                  - link "Open" [ref=f19e173] [cursor=pointer]:
+                    - /url: /rooms/825ebc41effd4146892a78bb4e2fa346
+              - generic [ref=f19e174]:
+                - heading "Halfway quizzes" [level=3] [ref=f19e176]
+                - generic [ref=f19e179]:
+                  - strong [ref=f19e180]: Graphs Sprint
+                  - generic [ref=f19e181]: Unlocks when you finish half the topics
+              - generic [ref=f19e182]:
+                - generic [ref=f19e183]:
+                  - heading "This week" [level=3] [ref=f19e184]
+                  - link "All charts" [ref=f19e185] [cursor=pointer]:
+                    - /url: /progress
+                - paragraph [ref=f19e186]: 0 focus minutes · 0 completed sessions · 0 topics ticked off
+                - img "Focus minutes" [ref=f19e188]:
+                  - generic [ref=f19e190]:
+                    - generic [ref=f19e191]: "0"
+                    - generic [ref=f19e192]: "10"
+                    - generic [ref=f19e193]: "20"
+                    - generic [ref=f19e194]: "30"
+                    - generic [ref=f19e195]: "40"
+                    - generic [ref=f19e196]: Sun
+                    - generic [ref=f19e197]: Mon
+                    - generic [ref=f19e198]: Tue
+                    - generic [ref=f19e199]: Wed
+                    - generic [ref=f19e200]: Thu
+                    - generic [ref=f19e201]: Fri
+                    - generic [ref=f19e202]: Sat
+                  - generic [ref=f19e203]: Goal 25 min
+              - generic [ref=f19e212]:
+                - generic [ref=f19e213]:
+                  - heading "Study calendar" [level=3] [ref=f19e214]
+                  - generic [ref=f19e215]: Last 26 weeks
+                - generic [ref=f19e216]:
+                  - img "Daily study calendar" [ref=f19e218]:
+                    - generic [ref=f19e219]: Mon
+                    - generic [ref=f19e220]: Wed
+                    - generic [ref=f19e221]: Fri
+                    - 'generic "Sun, Apr 26: 0 min" [ref=f19e222]'
+                    - 'generic "Mon, Apr 27: 0 min" [ref=f19e223]'
+                    - 'generic "Tue, Apr 28: 0 min" [ref=f19e224]'
+                    - 'generic "Wed, Apr 29: 0 min" [ref=f19e225]'
+                    - 'generic "Thu, Apr 30: 0 min" [ref=f19e226]'
+                    - 'generic "Fri, May 1: 0 min" [ref=f19e227]'
+                    - 'generic "Sat, May 2: 0 min" [ref=f19e228]'
+                    - 'generic "Sun, May 3: 0 min" [ref=f19e229]'
+                    - 'generic "Mon, May 4: 0 min" [ref=f19e230]'
+                    - 'generic "Tue, May 5: 0 min" [ref=f19e231]'
+                    - 'generic "Wed, May 6: 0 min" [ref=f19e232]'
+                    - 'generic "Thu, May 7: 0 min" [ref=f19e233]'
+                    - 'generic "Fri, May 8: 0 min" [ref=f19e234]'
+                    - 'generic "Sat, May 9: 0 min" [ref=f19e235]'
+                    - 'generic "Sun, May 10: 0 min" [ref=f19e236]'
+                    - 'generic "Mon, May 11: 0 min" [ref=f19e237]'
+                    - 'generic "Tue, May 12: 0 min" [ref=f19e238]'
+                    - 'generic "Wed, May 13: 0 min" [ref=f19e239]'
+                    - 'generic "Thu, May 14: 0 min" [ref=f19e240]'
+                    - 'generic "Fri, May 15: 0 min" [ref=f19e241]'
+                    - 'generic "Sat, May 16: 0 min" [ref=f19e242]'
+                    - 'generic "Sun, May 17: 0 min" [ref=f19e243]'
+                    - 'generic "Mon, May 18: 0 min" [ref=f19e244]'
+                    - 'generic "Tue, May 19: 0 min" [ref=f19e245]'
+                    - 'generic "Wed, May 20: 0 min" [ref=f19e246]'
+                    - 'generic "Thu, May 21: 0 min" [ref=f19e247]'
+                    - 'generic "Fri, May 22: 0 min" [ref=f19e248]'
+                    - 'generic "Sat, May 23: 0 min" [ref=f19e249]'
+                    - 'generic "Sun, May 24: 0 min" [ref=f19e250]'
+                    - 'generic "Mon, May 25: 0 min" [ref=f19e251]'
+                    - 'generic "Tue, May 26: 0 min" [ref=f19e252]'
+                    - 'generic "Wed, May 27: 0 min" [ref=f19e253]'
+                    - 'generic "Thu, May 28: 0 min" [ref=f19e254]'
+                    - 'generic "Fri, May 29: 0 min" [ref=f19e255]'
+                    - 'generic "Sat, May 30: 0 min" [ref=f19e256]'
+                    - 'generic "Sun, May 31: 0 min" [ref=f19e257]'
+                    - 'generic "Mon, Jun 1: 0 min" [ref=f19e258]'
+                    - 'generic "Tue, Jun 2: 0 min" [ref=f19e259]'
+                    - 'generic "Wed, Jun 3: 0 min" [ref=f19e260]'
+                    - 'generic "Thu, Jun 4: 0 min" [ref=f19e261]'
+                    - 'generic "Fri, Jun 5: 0 min" [ref=f19e262]'
+                    - 'generic "Sat, Jun 6: 0 min" [ref=f19e263]'
+                    - 'generic "Sun, Jun 7: 0 min" [ref=f19e264]'
+                    - 'generic "Mon, Jun 8: 0 min" [ref=f19e265]'
+                    - 'generic "Tue, Jun 9: 0 min" [ref=f19e266]'
+                    - 'generic "Wed, Jun 10: 0 min" [ref=f19e267]'
+                    - 'generic "Thu, Jun 11: 0 min" [ref=f19e268]'
+                    - 'generic "Fri, Jun 12: 0 min" [ref=f19e269]'
+                    - 'generic "Sat, Jun 13: 0 min" [ref=f19e270]'
+                    - 'generic "Sun, Jun 14: 0 min" [ref=f19e271]'
+                    - 'generic "Mon, Jun 15: 0 min" [ref=f19e272]'
+                    - 'generic "Tue, Jun 16: 0 min" [ref=f19e273]'
+                    - 'generic "Wed, Jun 17: 0 min" [ref=f19e274]'
+                    - 'generic "Thu, Jun 18: 0 min" [ref=f19e275]'
+                    - 'generic "Fri, Jun 19: 0 min" [ref=f19e276]'
+                    - 'generic "Sat, Jun 20: 0 min" [ref=f19e277]'
+                    - 'generic "Sun, Jun 21: 0 min" [ref=f19e278]'
+                    - 'generic "Mon, Jun 22: 0 min" [ref=f19e279]'
+                    - 'generic "Tue, Jun 23: 0 min" [ref=f19e280]'
+                    - 'generic "Wed, Jun 24: 0 min" [ref=f19e281]'
+                    - 'generic "Thu, Jun 25: 0 min" [ref=f19e282]'
+                    - 'generic "Fri, Jun 26: 0 min" [ref=f19e283]'
+                    - 'generic "Sat, Jun 27: 0 min" [ref=f19e284]'
+                    - 'generic "Sun, Jun 28: 0 min" [ref=f19e285]'
+                    - 'generic "Mon, Jun 29: 0 min" [ref=f19e286]'
+                    - 'generic "Tue, Jun 30: 0 min" [ref=f19e287]'
+                    - 'generic "Wed, Jul 1: 0 min" [ref=f19e288]'
+                    - 'generic "Thu, Jul 2: 0 min" [ref=f19e289]'
+                    - 'generic "Fri, Jul 3: 0 min" [ref=f19e290]'
+                    - 'generic "Sat, Jul 4: 0 min" [ref=f19e291]'
+                    - 'generic "Sun, Jul 5: 0 min" [ref=f19e292]'
+                    - 'generic "Mon, Jul 6: 0 min" [ref=f19e293]'
+                    - 'generic "Tue, Jul 7: 0 min" [ref=f19e294]'
+                    - 'generic "Wed, Jul 8: 0 min" [ref=f19e295]'
+                    - 'generic "Thu, Jul 9: 0 min" [ref=f19e296]'
+                    - 'generic "Fri, Jul 10: 0 min" [ref=f19e297]'
+                    - 'generic "Sat, Jul 11: 0 min" [ref=f19e298]'
+                    - 'generic "Sun, Jul 12: 0 min" [ref=f19e299]'
+                    - 'generic "Mon, Jul 13: 0 min" [ref=f19e300]'
+                    - 'generic "Tue, Jul 14: 0 min" [ref=f19e301]'
+                    - 'generic "Wed, Jul 15: 0 min" [ref=f19e302]'
+                    - 'generic "Thu, Jul 16: 0 min" [ref=f19e303]'
+                    - 'generic "Fri, Jul 17: 0 min" [ref=f19e304]'
+                    - 'generic "Sat, Jul 18: 0 min" [ref=f19e305]'
+                    - 'generic "Sun, Jul 19: 0 min" [ref=f19e306]'
+                    - 'generic "Mon, Jul 20: 0 min" [ref=f19e307]'
+                    - 'generic "Tue, Jul 21: 0 min" [ref=f19e308]'
+                    - 'generic "Wed, Jul 22: 0 min" [ref=f19e309]'
+                    - 'generic "Thu, Jul 23: 0 min" [ref=f19e310]'
+                    - 'generic "Fri, Jul 24: 0 min" [ref=f19e311]'
+                    - 'generic "Sat, Jul 25: 0 min" [ref=f19e312]'
+                    - 'generic "Sun, Jul 26: 0 min" [ref=f19e313]'
+                    - 'generic "Mon, Jul 27: 0 min" [ref=f19e314]'
+                    - 'generic "Tue, Jul 28: 0 min" [ref=f19e315]'
+                    - 'generic "Wed, Jul 29: 0 min" [ref=f19e316]'
+                    - 'generic "Thu, Jul 30: 0 min" [ref=f19e317]'
+                    - 'generic "Fri, Jul 31: 0 min" [ref=f19e318]'
+                    - 'generic "Sat, Aug 1: 0 min" [ref=f19e319]'
+                    - 'generic "Sun, Aug 2: 0 min" [ref=f19e320]'
+                    - 'generic "Mon, Aug 3: 0 min" [ref=f19e321]'
+                    - 'generic "Tue, Aug 4: 0 min" [ref=f19e322]'
+                    - 'generic "Wed, Aug 5: 0 min" [ref=f19e323]'
+                    - 'generic "Thu, Aug 6: 0 min" [ref=f19e324]'
+                    - 'generic "Fri, Aug 7: 0 min" [ref=f19e325]'
+                    - 'generic "Sat, Aug 8: 0 min" [ref=f19e326]'
+                    - 'generic "Sun, Aug 9: 0 min" [ref=f19e327]'
+                    - 'generic "Mon, Aug 10: 0 min" [ref=f19e328]'
+                    - 'generic "Tue, Aug 11: 0 min" [ref=f19e329]'
+                    - 'generic "Wed, Aug 12: 0 min" [ref=f19e330]'
+                    - 'generic "Thu, Aug 13: 0 min" [ref=f19e331]'
+                    - 'generic "Fri, Aug 14: 0 min" [ref=f19e332]'
+                    - 'generic "Sat, Aug 15: 0 min" [ref=f19e333]'
+                    - 'generic "Sun, Aug 16: 0 min" [ref=f19e334]'
+                    - 'generic "Mon, Aug 17: 0 min" [ref=f19e335]'
+                    - 'generic "Tue, Aug 18: 0 min" [ref=f19e336]'
+                    - 'generic "Wed, Aug 19: 0 min" [ref=f19e337]'
+                    - 'generic "Thu, Aug 20: 0 min" [ref=f19e338]'
+                    - 'generic "Fri, Aug 21: 0 min" [ref=f19e339]'
+                    - 'generic "Sat, Aug 22: 0 min" [ref=f19e340]'
+                    - 'generic "Sun, Aug 23: 0 min" [ref=f19e341]'
+                    - 'generic "Mon, Aug 24: 0 min" [ref=f19e342]'
+                    - 'generic "Tue, Aug 25: 0 min" [ref=f19e343]'
+                    - 'generic "Wed, Aug 26: 0 min" [ref=f19e344]'
+                    - 'generic "Thu, Aug 27: 0 min" [ref=f19e345]'
+                    - 'generic "Fri, Aug 28: 0 min" [ref=f19e346]'
+                    - 'generic "Sat, Aug 29: 0 min" [ref=f19e347]'
+                    - 'generic "Sun, Aug 30: 0 min" [ref=f19e348]'
+                    - 'generic "Mon, Aug 31: 0 min" [ref=f19e349]'
+                    - 'generic "Tue, Sep 1: 0 min" [ref=f19e350]'
+                    - 'generic "Wed, Sep 2: 0 min" [ref=f19e351]'
+                    - 'generic "Thu, Sep 3: 0 min" [ref=f19e352]'
+                    - 'generic "Fri, Sep 4: 0 min" [ref=f19e353]'
+                    - 'generic "Sat, Sep 5: 0 min" [ref=f19e354]'
+                    - 'generic "Sun, Sep 6: 0 min" [ref=f19e355]'
+                    - 'generic "Mon, Sep 7: 0 min" [ref=f19e356]'
+                    - 'generic "Tue, Sep 8: 0 min" [ref=f19e357]'
+                    - 'generic "Wed, Sep 9: 0 min" [ref=f19e358]'
+                    - 'generic "Thu, Sep 10: 0 min" [ref=f19e359]'
+                    - 'generic "Fri, Sep 11: 0 min" [ref=f19e360]'
+                    - 'generic "Sat, Sep 12: 0 min" [ref=f19e361]'
+                    - 'generic "Sun, Sep 13: 0 min" [ref=f19e362]'
+                    - 'generic "Mon, Sep 14: 0 min" [ref=f19e363]'
+                    - 'generic "Tue, Sep 15: 0 min" [ref=f19e364]'
+                    - 'generic "Wed, Sep 16: 0 min" [ref=f19e365]'
+                    - 'generic "Thu, Sep 17: 0 min" [ref=f19e366]'
+                    - 'generic "Fri, Sep 18: 0 min" [ref=f19e367]'
+                    - 'generic "Sat, Sep 19: 0 min" [ref=f19e368]'
+                    - 'generic "Sun, Sep 20: 0 min" [ref=f19e369]'
+                    - 'generic "Mon, Sep 21: 0 min" [ref=f19e370]'
+                    - 'generic "Tue, Sep 22: 0 min" [ref=f19e371]'
+                    - 'generic "Wed, Sep 23: 0 min" [ref=f19e372]'
+                    - 'generic "Thu, Sep 24: 0 min" [ref=f19e373]'
+                    - 'generic "Fri, Sep 25: 0 min" [ref=f19e374]'
+                    - 'generic "Sat, Sep 26: 0 min" [ref=f19e375]'
+                    - 'generic "Sun, Sep 27: 0 min" [ref=f19e376]'
+                    - 'generic "Mon, Sep 28: 0 min" [ref=f19e377]'
+                    - 'generic "Tue, Sep 29: 0 min" [ref=f19e378]'
+                    - 'generic "Wed, Sep 30: 0 min" [ref=f19e379]'
+                    - 'generic "Thu, Oct 1: 0 min" [ref=f19e380]'
+                    - 'generic "Fri, Oct 2: 0 min" [ref=f19e381]'
+                    - 'generic "Sat, Oct 3: 0 min" [ref=f19e382]'
+                    - 'generic "Sun, Oct 4: 0 min" [ref=f19e383]'
+                    - 'generic "Mon, Oct 5: 0 min" [ref=f19e384]'
+                    - 'generic "Tue, Oct 6: 0 min" [ref=f19e385]'
+                    - 'generic "Wed, Oct 7: 0 min" [ref=f19e386]'
+                    - 'generic "Thu, Oct 8: 0 min" [ref=f19e387]'
+                    - 'generic "Fri, Oct 9: 0 min" [ref=f19e388]'
+                    - 'generic "Sat, Oct 10: 0 min" [ref=f19e389]'
+                    - 'generic "Sun, Oct 11: 0 min" [ref=f19e390]'
+                    - 'generic "Mon, Oct 12: 0 min" [ref=f19e391]'
+                    - 'generic "Tue, Oct 13: 0 min" [ref=f19e392]'
+                    - 'generic "Wed, Oct 14: 0 min" [ref=f19e393]'
+                    - 'generic "Thu, Oct 15: 0 min" [ref=f19e394]'
+                    - 'generic "Fri, Oct 16: 0 min" [ref=f19e395]'
+                    - 'generic "Sat, Oct 17: 0 min" [ref=f19e396]'
+                    - 'generic "Sun, Oct 18: 0 min" [ref=f19e397]'
+                    - 'generic "Mon, Oct 19: 0 min" [ref=f19e398]'
+                    - 'generic "Tue, Oct 20: 0 min" [ref=f19e399]'
+                    - 'generic "Wed, Oct 21: 0 min" [ref=f19e400]'
+                    - 'generic "Thu, Oct 22: 0 min" [ref=f19e401]'
+                    - 'generic "Fri, Oct 23: 0 min" [ref=f19e402]'
+                    - 'generic "Sat, Oct 24: 0 min" [ref=f19e403]'
+                  - generic [ref=f19e404]:
+                    - generic [ref=f19e405]: Hover a day for details
+                    - generic [ref=f19e406]: No study
+                    - generic [ref=f19e408]: Under half the goal
+                    - generic [ref=f19e410]: Over half the goal
+                    - generic [ref=f19e412]: Goal met
+                    - generic [ref=f19e414]: Double the goal
+              - generic [ref=f19e416]:
+                - heading "Recent sessions" [level=3] [ref=f19e418]
+                - generic [ref=f19e419]: Start a focus session in a room. Completed sessions show up here.
+            - generic [ref=f19e420]:
+              - generic [ref=f19e421]:
+                - generic [ref=f19e422]:
+                  - heading "Upcoming meetings" [level=3] [ref=f19e423]
+                  - link "Schedule" [ref=f19e424] [cursor=pointer]:
+                    - /url: /meetings
+                - generic [ref=f19e425]: No meetings planned.
+              - generic [ref=f19e426]:
+                - heading "Notes & AI" [level=3] [ref=f19e428]
+                - generic [ref=f19e429]: Notes generated in your rooms appear here.
+              - generic [ref=f19e430]:
+                - heading "Nest Race results" [level=3] [ref=f19e432]
+                - generic [ref=f19e433]: Finish a room to see your race results.
+              - generic [ref=f19e434]:
+                - heading "Rooms for you" [level=3] [ref=f19e436]
+                - generic [ref=f19e437]:
+                  - text: No open rooms match your subjects this week.
+                  - link "Start one!" [ref=f19e438] [cursor=pointer]:
+                    - /url: /rooms/new
+              - generic [ref=f19e439]:
+                - generic [ref=f19e440]:
+                  - heading "Study buddies for you" [level=3] [ref=f19e441]
+                  - link "More" [ref=f19e442] [cursor=pointer]:
+                    - /url: /buddies
+                - generic [ref=f19e443]:
+                  - generic [ref=f19e444]:
+                    - img "Bird avatar" [ref=f19e445]
+                    - generic [ref=f19e462]:
+                      - link "Robin B" [ref=f19e463] [cursor=pointer]:
+                        - /url: /u/52d25d02f842439297045437542dcbc6
+                      - generic [ref=f19e464]: "95% match · You share 1 subject: dsa."
+                    - button "Follow" [ref=f19e465] [cursor=pointer]
+                  - generic [ref=f19e466]:
+                    - img "Bird avatar" [ref=f19e467]
+                    - generic [ref=f19e484]:
+                      - link "kurur" [ref=f19e485] [cursor=pointer]:
+                        - /url: /u/0601d01956a34739a757d5976e0f8543
+                      - generic [ref=f19e486]: 30% match
+                    - button "Follow" [ref=f19e487] [cursor=pointer]
+              - generic [ref=f19e488]:
+                - img "Bird avatar" [ref=f19e489]
+                - paragraph [ref=f19e505]:
+                  - strong [ref=f19e506]: Keep going!
+                  - text: You're doing great.
+  - status

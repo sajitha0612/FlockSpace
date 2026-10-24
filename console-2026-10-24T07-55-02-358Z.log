@@ -1,0 +1,5 @@
+[  188989ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346/messages:0
+[  189009ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346/messages:0
+[  189033ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346/pomodoro:0
+[  189053ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346/pomodoro:0
+[  189074ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346:0

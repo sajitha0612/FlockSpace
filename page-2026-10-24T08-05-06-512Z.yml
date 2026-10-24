@@ -1,0 +1,28 @@
+- generic [ref=f32e2]:
+  - generic [ref=f32e5]:
+    - link "FlockSpace" [ref=f32e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f32e15]:
+      - img "Bird avatar" [ref=f32e16]
+      - generic [ref=f32e32]:
+        - heading "Welcome back" [level=1] [ref=f32e33]
+        - paragraph [ref=f32e34]: Your flock is waiting.
+    - generic [ref=f32e35]:
+      - generic [ref=f32e36]:
+        - paragraph [ref=f32e37]:
+          - strong [ref=f32e38]: Offline demo.
+          - text: The FlockSpace server isn’t reachable, so everything runs in this browser with sample rooms and people. Your changes are saved on this device.
+        - button "Explore as the demo student" [ref=f32e39] [cursor=pointer]
+      - generic [ref=f32e40]:
+        - text: Email
+        - textbox "Email" [ref=f32e41]
+      - generic [ref=f32e42]:
+        - text: Password
+        - textbox "Password" [ref=f32e43]
+      - button "Sign in" [ref=f32e44] [cursor=pointer]
+      - generic [ref=f32e45]:
+        - link "Forgot password?" [ref=f32e46] [cursor=pointer]:
+          - /url: /forgot
+        - link "Create an account" [ref=f32e47] [cursor=pointer]:
+          - /url: /signup
+  - status

@@ -1,0 +1,27 @@
+- generic [ref=f15e2]:
+  - generic [ref=f15e5]:
+    - link "NestUp" [ref=f15e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f15e7]:
+      - img "Bird avatar" [ref=f15e8]
+      - generic [ref=f15e24]:
+        - heading "Join the flock" [level=1] [ref=f15e25]
+        - paragraph [ref=f15e26]: Study together and build your nest.
+    - generic [ref=f15e27]:
+      - generic [ref=f15e28]:
+        - text: Your name
+        - textbox "Your name" [ref=f15e29]
+      - generic [ref=f15e30]:
+        - text: Email
+        - textbox "Email" [ref=f15e31]
+      - generic [ref=f15e32]:
+        - text: Password
+        - generic [ref=f15e33]: At least 8 characters.
+        - textbox "Password At least 8 characters." [ref=f15e34]
+      - button "Create account" [ref=f15e35] [cursor=pointer]
+      - paragraph [ref=f15e36]: We'll email you a code to verify your address. Verified accounts can win Golden Nests.
+      - paragraph [ref=f15e37]:
+        - text: Already have an account?
+        - link "Sign in" [ref=f15e38] [cursor=pointer]:
+          - /url: /login
+  - status

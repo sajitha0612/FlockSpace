@@ -1,0 +1,1 @@
+[   15688ms] [ERROR] Failed to load resource: the server responded with a status of 422 (Unprocessable Entity) @ http://localhost:5173/api/rooms/825ebc41effd4146892a78bb4e2fa346/pomodoro:0

@@ -1,0 +1,21 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e5]:
+    - link "NestUp" [ref=f1e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f1e7]:
+      - img "Bird avatar" [ref=f1e8]
+      - generic [ref=f1e24]:
+        - heading "Check your inbox" [level=1] [ref=f1e25]
+        - paragraph [ref=f1e26]: We sent a 6-digit code to qa1@example.com.
+    - generic [ref=f1e27]:
+      - paragraph [ref=f1e28]: Email isn’t set up on this server yet (dev mode), so your code was printed in the backend’s console.
+      - generic [ref=f1e29]:
+        - text: Verification code
+        - textbox "Verification code" [ref=f1e30]
+      - button "Verify" [disabled] [ref=f1e31]
+      - generic [ref=f1e32]:
+        - button "Resend code" [ref=f1e33] [cursor=pointer]
+        - link "Do this later" [ref=f1e34] [cursor=pointer]:
+          - /url: /welcome
+      - paragraph [ref=f1e35]: Verification proves you control this inbox; it's required to win Golden Nests. You can study, chat and race without it.
+  - status

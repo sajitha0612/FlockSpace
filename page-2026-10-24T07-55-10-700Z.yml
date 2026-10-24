@@ -1,0 +1,127 @@
+- generic [ref=f23e2]:
+  - generic [ref=f23e3]:
+    - complementary [ref=f23e4]:
+      - link "NestUp" [ref=f23e5] [cursor=pointer]:
+        - /url: /home
+      - navigation "Main" [ref=f23e6]:
+        - link "Home" [ref=f23e7] [cursor=pointer]:
+          - /url: /home
+        - link "Rooms" [ref=f23e11] [cursor=pointer]:
+          - /url: /rooms
+        - link "Meetings" [ref=f23e15] [cursor=pointer]:
+          - /url: /meetings
+        - link "Buddies" [ref=f23e19] [cursor=pointer]:
+          - /url: /buddies
+        - link "Progress" [ref=f23e23] [cursor=pointer]:
+          - /url: /progress
+        - link "Achievements" [ref=f23e27] [cursor=pointer]:
+          - /url: /achievements
+        - link "My bird" [ref=f23e31] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=f23e35]:
+        - link "Settings" [ref=f23e36] [cursor=pointer]:
+          - /url: /settings
+        - button "Sign out" [ref=f23e40] [cursor=pointer]
+    - generic [ref=f23e44]:
+      - banner [ref=f23e45]:
+        - link "Verify your email" [ref=f23e47] [cursor=pointer]:
+          - /url: /verify
+        - button "Toggle dark mode" [ref=f23e48] [cursor=pointer]
+        - link "Invitations" [ref=f23e51] [cursor=pointer]:
+          - /url: /invites
+        - link "Notifications, 2 unread" [ref=f23e183] [cursor=pointer]:
+          - /url: /notifications
+          - generic [ref=f23e57]: "2"
+        - link "My profile" [ref=f23e58] [cursor=pointer]:
+          - /url: /profile
+          - img "Bird avatar" [ref=f23e59]
+      - main [ref=f23e76]:
+        - generic [ref=f23e77]:
+          - generic [ref=f23e78]:
+            - generic [ref=f23e79]:
+              - generic [ref=f23e80]:
+                - generic [ref=f23e81]:
+                  - heading "Graphs Sprint" [level=1] [ref=f23e82]
+                  - generic [ref=f23e83]: Study phase ends in 01:57:26
+                - generic [ref=f23e84]:
+                  - generic [ref=f23e85]: DSA
+                  - generic [ref=f23e86]: 2h
+                  - generic [ref=f23e89]: 2/10
+                  - generic [ref=f23e92]: Today, 1:22 PM
+                  - generic [ref=f23e95]: by Test Sparrow
+              - button "Report" [ref=f23e97] [cursor=pointer]
+            - generic "2% of study time used" [ref=f23e100]
+          - generic [ref=f23e102]:
+            - generic [ref=f23e103]:
+              - tablist [ref=f23e104]:
+                - tab "Checklist" [selected] [ref=f23e105] [cursor=pointer]
+                - tab "Chat" [ref=f23e106] [cursor=pointer]
+                - tab "Resources" [ref=f23e107] [cursor=pointer]
+                - tab "Notes & AI" [ref=f23e108] [cursor=pointer]
+                - tab "Tasks" [ref=f23e109] [cursor=pointer]
+                - tab "Study agent" [ref=f23e110] [cursor=pointer]
+                - tab "Halfway quiz" [ref=f23e111] [cursor=pointer]
+                - tab "People" [ref=f23e112] [cursor=pointer]
+                - tab "Manage" [ref=f23e113] [cursor=pointer]
+              - generic [ref=f23e115]:
+                - generic [ref=f23e116]:
+                  - generic [ref=f23e117]:
+                    - heading "1/2 completed" [level=3] [ref=f23e184]
+                    - generic [ref=f23e119]: 50%
+                  - list [ref=f23e121]:
+                    - listitem [ref=f23e122]:
+                      - generic [ref=f23e123] [cursor=pointer]:
+                        - checkbox "BFS" [checked] [ref=f23e124]
+                        - generic [ref=f23e125]: BFS
+                    - listitem [ref=f23e126]:
+                      - generic [ref=f23e127] [cursor=pointer]:
+                        - checkbox "DFS" [ref=f23e128]
+                        - generic [ref=f23e129]: DFS
+                  - paragraph [ref=f23e130]: "Ticking a topic is your own note of progress. It's personal: nobody else's checklist changes."
+                - generic [ref=f23e131]:
+                  - heading "Halfway quiz" [level=3] [ref=f23e132]
+                  - generic [aria-hidden] [ref=f23e133]:
+                    - generic [ref=f23e134]: "1"
+                    - generic [ref=f23e135]: "2"
+                    - generic [ref=f23e136]: "3"
+                    - generic [ref=f23e137]: "4"
+                    - generic [ref=f23e138]: "5"
+                  - paragraph [ref=f23e186]:
+                    - strong [ref=f23e187]: You've completed 1/2 topics!
+                    - text: Your halfway quiz is unlocked. Test your understanding.
+                  - button "Go to quiz" [ref=f23e140] [cursor=pointer]
+            - complementary [ref=f23e141]:
+              - generic [ref=f23e142]:
+                - heading "Your focus cycle" [level=3] [ref=f23e143]
+                - paragraph [ref=f23e144]: Choose your rhythm. It's yours alone; the room's end time doesn't change.
+                - group "Focus presets" [ref=f23e145]:
+                  - button "15/5" [ref=f23e146] [cursor=pointer]
+                  - button "25/5" [ref=f23e147] [cursor=pointer]
+                  - button "50/10" [ref=f23e148] [cursor=pointer]
+                  - button "Custom" [ref=f23e149] [cursor=pointer]
+                - generic [ref=f23e150]:
+                  - img "idle 00:00" [ref=f23e151]
+                  - generic [ref=f23e154]:
+                    - generic [ref=f23e155]: Ready
+                    - generic [ref=f23e156]: 25:00
+                    - generic [ref=f23e157]: 0 completed
+                - button "Start focus" [ref=f23e159] [cursor=pointer]
+              - generic [ref=f23e162]:
+                - heading "Session ends in" [level=3] [ref=f23e163]
+                - generic [ref=f23e164]: 01:57:26
+                - paragraph [ref=f23e167]: The room's end time is set by its creator and kept by the server. Pomodoro breaks never extend it.
+              - generic [ref=f23e168]:
+                - generic [ref=f23e169]:
+                  - heading "Participants" [level=3] [ref=f23e170]
+                  - button "All" [ref=f23e171] [cursor=pointer]
+                - generic [ref=f23e172]:
+                  - generic [ref=f23e173]:
+                    - generic [ref=f23e175]: You
+                    - generic [ref=f23e176]: Online
+                    - generic [ref=f23e177]: 0%
+                  - generic [ref=f23e178]:
+                    - generic [ref=f23e180]: Robin B
+                    - generic [ref=f23e181]: Offline
+                    - generic [ref=f23e182]: 0%
+  - status [ref=f23e188]:
+    - generic [ref=f23e189]: Halfway quiz unlocked!
