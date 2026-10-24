@@ -1,197 +1,147 @@
-"""
-Quiz endpoints. The question bank (with answers) is visible only to the room creator; other participants only
-ever receive questions with opaque, per-person option tokens, and correct answers only after the quiz closes.
-"""
-import json
-from pathlib import Path
+from datetime import datetime
 
-from fastapi import APIRouter, Depends
-from pydantic import BaseModel, Field
-from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy import JSON, Boolean, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy.orm import Mapped, mapped_column
 
-from ..core.db import get_db
-from ..core.errors import ApiError, not_found, ok
-from ..core.ratelimit import limiter
-from ..core.security import acting_user, current_user
-from ..models import Question, Race, RoomTopic, User
-from ..services import quiz as qs
-from ..services import race as race_service
-from ..services import rooms as svc
-
-router = APIRouter(tags=["quiz"])
-SEED = Path(__file__).resolve().parents[1] / "seed" / "bank.json"
+from ..core.db import Base, new_id, utcnow
 
 
-def _creator_room(db: Session, room_id: str, user: User):
-    room = svc.get_room(db, room_id)
-    svc.require_creator(room, user.id)
-    return room
+class Question(Base):
+    """A multiple-choice question in a room's bank. Only 'approved' questions are ever used in a quiz."""
+    __tablename__ = "questions"
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    room_id: Mapped[str] = mapped_column(ForeignKey("rooms.id", ondelete="CASCADE"), index=True)
+    topic_id: Mapped[str | None] = mapped_column(ForeignKey("room_topics.id", ondelete="SET NULL"), nullable=True)
+    prompt: Mapped[str] = mapped_column(Text)
+    options: Mapped[list] = mapped_column(JSON)
+    correct_index: Mapped[int] = mapped_column(Integer)
+    explanation: Mapped[str] = mapped_column(Text, default="")
+    difficulty: Mapped[int] = mapped_column(Integer, default=2)
+    status: Mapped[str] = mapped_column(String(10), default="approved")  # approved | draft
+    source: Mapped[str] = mapped_column(String(10), default="manual")  # manual | bank | ai
+    created_by: Mapped[str] = mapped_column(ForeignKey("users.id"))
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
-def _unlocked_bank(db: Session, room) -> None:
-    if qs.bank_locked(db, room):
-        raise ApiError("BANK_LOCKED", "The question set is locked: the Nest Race has been created.", 409)
+class QuizAttempt(Base):
+    """The personal halfway quiz. One attempt per student per room; the question set is frozen when it starts."""
+    __tablename__ = "quiz_attempts"
+    __table_args__ = (UniqueConstraint("room_id", "user_id", "kind"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    room_id: Mapped[str] = mapped_column(ForeignKey("rooms.id", ondelete="CASCADE"), index=True)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    kind: Mapped[str] = mapped_column(String(10), default="halfway")
+    question_ids: Mapped[list] = mapped_column(JSON)
+    seed: Mapped[str] = mapped_column(String(32))
+    config: Mapped[dict] = mapped_column(JSON, default=dict)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    deadline: Mapped[datetime] = mapped_column(DateTime)
+    submitted_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    score: Mapped[int] = mapped_column(Integer, default=0)
+    total: Mapped[int] = mapped_column(Integer, default=0)
+    twigs: Mapped[int] = mapped_column(Integer, default=0)
 
 
-@router.get("/rooms/{room_id}/questions")
-def bank(room_id: str, user: User = Depends(current_user), db: Session = Depends(get_db)):
-    room = _creator_room(db, room_id, user)
-    return ok({"questions": qs.bank_view(db, room), "locked": qs.bank_locked(db, room)})
+class QuizAnswer(Base):
+    __tablename__ = "quiz_answers"
+    __table_args__ = (UniqueConstraint("attempt_id", "question_id"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    attempt_id: Mapped[str] = mapped_column(ForeignKey("quiz_attempts.id", ondelete="CASCADE"), index=True)
+    question_id: Mapped[str] = mapped_column(String(32))
+    chosen_index: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    correct: Mapped[bool] = mapped_column(Boolean, default=False)
+    answered_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
-class QuestionIn(BaseModel):
-    topic_id: str | None = None
-    prompt: str = Field(min_length=5, max_length=1000)
-    options: list[str] = Field(min_length=2, max_length=6)
-    correct_index: int
-    explanation: str = Field(default="", max_length=1000)
-    difficulty: int = Field(default=2, ge=1, le=3)
+class Race(Base):
+    """The Nest Race. config holds the rules, locked when the race is created and never changed afterwards."""
+    __tablename__ = "races"
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    room_id: Mapped[str] = mapped_column(ForeignKey("rooms.id", ondelete="CASCADE"), unique=True)
+    status: Mapped[str] = mapped_column(String(10), default="countdown")  # countdown | live | finished | void
+    starts_at: Mapped[datetime] = mapped_column(DateTime)
+    deadline: Mapped[datetime] = mapped_column(DateTime)
+    config: Mapped[dict] = mapped_column(JSON)
+    question_ids: Mapped[list] = mapped_column(JSON)
+    eligible_count: Mapped[int] = mapped_column(Integer, default=0)
+    void_reason: Mapped[str] = mapped_column(String(200), default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    finalized_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
-def _check_topic(db: Session, room, topic_id: str | None) -> None:
-    if topic_id:
-        t = db.get(RoomTopic, topic_id)
-        if not t or t.room_id != room.id:
-            raise ApiError("VALIDATION_ERROR", "Unknown topic.", 422)
+class RaceEntry(Base):
+    __tablename__ = "race_entries"
+    __table_args__ = (UniqueConstraint("race_id", "user_id"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    race_id: Mapped[str] = mapped_column(ForeignKey("races.id", ondelete="CASCADE"), index=True)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    twigs: Mapped[int] = mapped_column(Integer, default=0)
+    correct: Mapped[int] = mapped_column(Integer, default=0)
+    answered: Mapped[int] = mapped_column(Integer, default=0)
+    nest_completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    last_answer_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    withdrew_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    placement: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    eligible: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
-@router.post("/rooms/{room_id}/questions")
-def add_question(room_id: str, body: QuestionIn, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    room = _creator_room(db, room_id, user)
-    _unlocked_bank(db, room)
-    qs.validate_question(body.prompt, body.options, body.correct_index)
-    _check_topic(db, room, body.topic_id)
-    q = Question(room_id=room.id, topic_id=body.topic_id, prompt=body.prompt.strip(), options=[o.strip() for o in body.options], correct_index=body.correct_index,
-                 explanation=body.explanation.strip(), difficulty=body.difficulty, status="approved", source="manual", created_by=user.id)
-    db.add(q)
-    db.commit()
-    return ok({"id": q.id})
+class RaceAnswer(Base):
+    __tablename__ = "race_answers"
+    __table_args__ = (UniqueConstraint("entry_id", "question_id"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("race_entries.id", ondelete="CASCADE"), index=True)
+    question_id: Mapped[str] = mapped_column(String(32))
+    chosen_index: Mapped[int] = mapped_column(Integer)
+    correct: Mapped[bool] = mapped_column(Boolean)
+    answered_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
-@router.put("/questions/{question_id}")
-def edit_question(question_id: str, body: QuestionIn, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    q = db.get(Question, question_id)
-    if not q:
-        raise not_found("Question")
-    room = _creator_room(db, q.room_id, user)
-    _unlocked_bank(db, room)
-    qs.validate_question(body.prompt, body.options, body.correct_index)
-    _check_topic(db, room, body.topic_id)
-    q.topic_id, q.prompt, q.options, q.correct_index = body.topic_id, body.prompt.strip(), [o.strip() for o in body.options], body.correct_index
-    q.explanation, q.difficulty = body.explanation.strip(), body.difficulty
-    db.commit()
-    return ok({"id": q.id})
+class TwigLedger(Base):
+    """Every twig ever earned or spent. dedupe_key makes each reward claimable exactly once."""
+    __tablename__ = "twig_ledger"
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    amount: Mapped[int] = mapped_column(Integer)
+    kind: Mapped[str] = mapped_column(String(20))  # halfway_correct | race_correct | placement_bonus | purchase
+    ref: Mapped[str] = mapped_column(String(64), default="")
+    note: Mapped[str] = mapped_column(String(160), default="")
+    dedupe_key: Mapped[str] = mapped_column(String(160), unique=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
 
 
-@router.post("/questions/{question_id}/approve")
-def approve_question(question_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    q = db.get(Question, question_id)
-    if not q:
-        raise not_found("Question")
-    room = _creator_room(db, q.room_id, user)
-    _unlocked_bank(db, room)
-    q.status = "approved"
-    db.commit()
-    return ok({"status": q.status})
+class GoldenNest(Base):
+    __tablename__ = "golden_nests"
+    __table_args__ = (UniqueConstraint("user_id", "race_id"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    race_id: Mapped[str] = mapped_column(ForeignKey("races.id"))
+    room_id: Mapped[str] = mapped_column(String(32))
+    placement: Mapped[int] = mapped_column(Integer)
+    status: Mapped[str] = mapped_column(String(10), default="awarded")  # awarded | withheld (pending review)
+    awarded_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
-@router.delete("/questions/{question_id}")
-def delete_question(question_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    q = db.get(Question, question_id)
-    if not q:
-        raise not_found("Question")
-    room = _creator_room(db, q.room_id, user)
-    _unlocked_bank(db, room)
-    db.delete(q)
-    db.commit()
-    return ok({"deleted": True})
+class UserItem(Base):
+    __tablename__ = "user_items"
+    __table_args__ = (UniqueConstraint("user_id", "item_id"),)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    item_id: Mapped[str] = mapped_column(String(40))
+    source: Mapped[str] = mapped_column(String(40), default="")
+    unlocked_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
-@router.post("/rooms/{room_id}/questions/import-bank")
-def import_bank(room_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    """Copies starter-bank questions whose topic matches one of the room's topics (by name). Skips ones already imported."""
-    room = _creator_room(db, room_id, user)
-    _unlocked_bank(db, room)
-    seed = json.loads(SEED.read_text(encoding="utf-8"))
-    have = {q.prompt for q in db.scalars(select(Question).where(Question.room_id == room.id))}
-    added = 0
-    for t in svc.topics(db, room.id):
-        name = t.title.lower()
-        for item in seed:
-            if (item["topic"] in name or name in item["topic"]) and item["prompt"] not in have:
-                db.add(Question(room_id=room.id, topic_id=t.id, prompt=item["prompt"], options=item["options"], correct_index=item["correct_index"],
-                                explanation=item.get("explanation", ""), status="approved", source="bank", created_by=user.id))
-                have.add(item["prompt"])
-                added += 1
-    db.commit()
-    return ok({"added": added})
-
-
-# ---------------- halfway quiz ----------------
-
-@router.get("/rooms/{room_id}/halfway")
-def halfway(room_id: str, user: User = Depends(current_user), db: Session = Depends(get_db)):
-    room = svc.get_room(db, room_id)
-    svc.sync_room(db, room)
-    svc.require_participant(db, room, user.id)
-    return ok(qs.halfway_status(db, room, user.id))
-
-
-@router.post("/rooms/{room_id}/halfway/start")
-def start_halfway(room_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    room = svc.get_room(db, room_id)
-    return ok(qs.start_halfway(db, room, user.id))
-
-
-class AnswerIn(BaseModel):
-    question_id: str
-    option: str = Field(min_length=6, max_length=32)
-
-
-@router.post("/rooms/{room_id}/halfway/answer")
-def answer_halfway(room_id: str, body: AnswerIn, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    limiter.hit("quiz_submit", user.id)
-    room = svc.get_room(db, room_id)
-    return ok(qs.answer_halfway(db, room, user.id, body.question_id, body.option))
-
-
-@router.post("/rooms/{room_id}/halfway/finish")
-def finish_halfway(room_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    room = svc.get_room(db, room_id)
-    return ok(qs.finish_halfway(db, room, user.id))
-
-
-# ---------------- Nest Race ----------------
-
-@router.get("/rooms/{room_id}/race")
-def get_race(room_id: str, user: User = Depends(current_user), db: Session = Depends(get_db)):
-    room = svc.get_room(db, room_id)
-    svc.sync_room(db, room)
-    if not svc.can_view(db, room, user.id):
-        raise not_found("Room")
-    race = db.scalar(select(Race).where(Race.room_id == room.id))
-    if not race:
-        return ok(None)
-    return ok(race_service.race_view(db, room, race, user.id))
-
-
-@router.post("/races/{race_id}/answer")
-def race_answer(race_id: str, body: AnswerIn, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    limiter.hit("quiz_submit", user.id)
-    race = race_service.get_race(db, race_id)
-    room = svc.get_room(db, race.room_id)
-    svc.sync_room(db, room)
-    db.refresh(race)
-    result = race_service.answer(db, room, race, user, body.question_id, body.option)
-    svc.sync_room(db, room)  # finalizes immediately if this was the last answer
-    return ok(result)
-
-
-@router.post("/races/{race_id}/withdraw")
-def race_withdraw(race_id: str, user: User = Depends(acting_user), db: Session = Depends(get_db)):
-    race = race_service.get_race(db, race_id)
-    room = svc.get_room(db, race.room_id)
-    race_service.withdraw(db, room, race, user)
-    svc.sync_room(db, room)
-    return ok({"withdrawn": True})
+class RiskFlag(Base):
+    """A pattern worth a human look. Never a verdict, never acted on automatically."""
+    __tablename__ = "risk_flags"
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_id)
+    kind: Mapped[str] = mapped_column(String(32))
+    subject_user_id: Mapped[str | None] = mapped_column(String(32), nullable=True, index=True)
+    details: Mapped[dict] = mapped_column(JSON, default=dict)
+    status: Mapped[str] = mapped_column(String(10), default="open")  # open | dismissed | actioned
+    dedupe_key: Mapped[str] = mapped_column(String(160), unique=True)
+    note: Mapped[str] = mapped_column(Text, default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    reviewed_by: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
